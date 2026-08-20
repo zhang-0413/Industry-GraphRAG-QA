@@ -1,0 +1,5 @@
+﻿strategy,samples,hit_at_5,recall_at_5,mrr,context_precision,context_recall,latency_ms,all_evidence_hit_samples,rerank_used_samples,graph_used_samples
+router_oracle_by_type,20,1.0,0.9875,1.0,0.27,0.9875,106.75,19,1,0
+router_safe,20,1.0,0.9875,1.0,0.27,0.9875,346.21,19,1,0
+router_graph_rerank,20,1.0,0.95,1.0,0.25,0.95,871.32,18,12,12
+router_always_q015_rerank,20,0.45,0.3375,0.2683,0.11,0.3375,694.01,4,20,0

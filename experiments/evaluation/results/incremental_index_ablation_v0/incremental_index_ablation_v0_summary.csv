@@ -1,0 +1,6 @@
+﻿run_id,strategy,transitions,embedding_recompute_count,embedding_saved_ratio,text_upsert_count,delete_count,graph_cleanup_count,graph_rebuild_count,stale_chunk_count,missing_chunk_count,query_pass_rate,measured_embedding_latency_ms
+incremental_index_ablation_v0_001,incremental_with_graph_cleanup,3,2,0.9412,2,1,2,2,0,0,1.0,680.26
+incremental_index_ablation_v0_001,full_reindex,3,34,0.0,34,34,34,34,0,0,1.0,1485.98
+incremental_index_ablation_v0_001,unstable_chunk_id,3,34,0.0,34,34,34,34,34,34,1.0,1321.15
+incremental_index_ablation_v0_001,incremental_without_delete,3,2,0.9412,2,0,1,2,1,0,0.6667,674.64
+incremental_index_ablation_v0_001,incremental_without_hash,3,1,0.9706,1,1,1,1,3,0,0.6667,331.05

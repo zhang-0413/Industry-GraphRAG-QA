@@ -1,0 +1,21 @@
+﻿sample_id,question_type,difficulty,best_routes,best_recall_at_5,best_mrr,question
+EVAL-0001,fact,easy,bm25 | graph | vector,1.0,1.0,What is BluePump-X100?
+EVAL-0002,fact,easy,bm25 | vector | graph,1.0,1.0,Which pipeline does BluePump-X100 move cooling water through?
+EVAL-0003,fact,easy,bm25 | vector | graph,1.0,1.0,What is Filter-F33?
+EVAL-0004,entity_relation,easy,bm25 | graph | vector,1.0,1.0,What does Safety-Regulation-42 require for BluePump-X100?
+EVAL-0005,cross_paragraph,medium,bm25 | vector | graph,1.0,1.0,Which sensors report to ControlSystem-CS1?
+EVAL-0006,entity_relation,easy,bm25,1.0,1.0,What does Sensor T-200 monitor?
+EVAL-0007,numeric,easy,bm25 | vector | graph,1.0,1.0,What is the design pressure of Pipeline-7A?
+EVAL-0008,numeric,easy,bm25 | vector | graph,1.0,1.0,What is the alarm threshold for Pipeline-7A?
+EVAL-0009,numeric,medium,bm25 | vector | graph,1.0,1.0,When must Sensor P-210 trigger a high-pressure alarm?
+EVAL-0010,causal_reasoning,medium,bm25 | vector | graph,1.0,1.0,What happened in incident IR-2024-017?
+EVAL-0011,cross_document,hard,bm25 | vector | graph,1.0,1.0,Which safety device required by Safety-Regulation-42 was verified after IR-2024-017?
+EVAL-0012,cross_document,hard,graph,1.0,1.0,Was Pipeline-7A pressure above the alarm threshold during IR-2024-017 inspection?
+EVAL-0013,entity_relation,easy,bm25 | vector | graph,1.0,1.0,Which components must be inspected after an abnormal temperature report from Sensor T-200?
+EVAL-0014,causal_reasoning,medium,bm25,1.0,1.0,What maintenance action resolved the abnormal temperature in IR-2024-017?
+EVAL-0015,global_summary,hard,bm25 | vector | graph,0.25,1.0,Summarize the safety chain involving BluePump-X100 across the manuals and incident report.
+EVAL-0016,table,easy,bm25 | vector,1.0,1.0,What is the measured pressure of Pipeline-7A in the inspection table?
+EVAL-0017,table,medium,bm25 | vector,1.0,1.0,Was Pipeline-7A below the alarm threshold according to the table?
+EVAL-0018,image,medium,bm25 | vector,1.0,1.0,Where is ReliefValve-RV9 installed according to the diagram?
+EVAL-0019,fact,easy,bm25,1.0,1.0,Which equipment was reviewed after incident IR-2024-017?
+EVAL-0020,multi_hop,hard,bm25 | vector,1.0,1.0,"According to the table and diagram, what was Pipeline-7A's pressure status and where was ReliefValve-RV9 installed?"

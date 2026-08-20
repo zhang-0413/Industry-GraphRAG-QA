@@ -1,0 +1,13 @@
+﻿chunking_strategy,retrieval_strategy,k,samples,avg_hit_at_k,avg_recall_at_k,avg_mrr,avg_context_precision,avg_context_recall,avg_latency_ms,all_evidence_hit_samples
+fixed,bm25,1,15,0.8667,0.7611,0.8667,0.8667,0.7611,0.57,10
+fixed,bm25,3,15,1.0,0.9833,0.9222,0.4667,0.9833,0.57,14
+fixed,bm25,5,15,1.0,1.0,0.9222,0.2933,1.0,0.57,15
+fixed,vector,1,15,0.8667,0.7278,0.8667,0.8667,0.7278,473.76,9
+fixed,vector,3,15,0.8667,0.7944,0.8667,0.3778,0.7944,473.76,10
+fixed,vector,5,15,0.9333,0.9167,0.8833,0.2667,0.9167,473.76,13
+structure_aware,bm25,1,15,1.0,0.8167,1.0,1.0,0.8167,0.56,10
+structure_aware,bm25,3,15,1.0,0.9167,1.0,0.4,0.9167,0.56,13
+structure_aware,bm25,5,15,1.0,0.95,1.0,0.2533,0.95,0.56,14
+structure_aware,vector,1,15,0.7333,0.6167,0.7333,0.7333,0.6167,346.39,8
+structure_aware,vector,3,15,0.8667,0.7611,0.7889,0.3778,0.7611,346.39,9
+structure_aware,vector,5,15,0.8667,0.7611,0.7889,0.2267,0.7611,346.39,9

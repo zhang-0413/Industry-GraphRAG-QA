@@ -1,0 +1,4 @@
+﻿strategy,samples,top_k,pass_rate,avg_answer_point_coverage,avg_gold_token_f1,avg_faithfulness_proxy,avg_answer_relevance_proxy,avg_retrieval_latency_ms,avg_generation_latency_ms,avg_total_latency_ms,avg_context_approx_tokens,avg_answer_approx_tokens
+bm25,20,5,0.45,0.6283,0.609,0.8018,0.6399,0.86,2596.32,2597.18,263.9,14.6
+router,20,5,0.6,0.7033,0.6503,0.8299,0.6399,484.86,2649.98,3134.84,233.85,15.65
+vector,20,5,0.55,0.6975,0.629,0.8252,0.6935,665.35,2656.3,3321.66,268.25,17.25

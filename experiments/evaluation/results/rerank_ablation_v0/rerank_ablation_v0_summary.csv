@@ -1,0 +1,10 @@
+﻿strategy,samples,top_k,hit_at_5,recall_at_5,mrr,context_precision,context_recall,latency_ms,all_evidence_hit_samples,rank_improved,rank_worsened,evidence_lost_after_rerank,evidence_gained_after_rerank
+bm25_vector_rrf,20,5,1.0,0.9625,1.0,0.25,0.9625,693.83,19,0,0,0,0
+vector,20,5,1.0,0.9625,0.9,0.25,0.9625,692.96,19,0,0,0,0
+bm25,20,5,1.0,0.9375,1.0,0.24,0.9375,0.81,18,0,0,0,0
+bm25_vector_rrf_query_rerank,20,5,1.0,0.9375,1.0,0.24,0.9375,693.96,18,2,4,1,0
+bm25_vector_graph_rrf_query_rerank,20,5,1.0,0.9375,1.0,0.24,0.9375,1454.14,18,5,1,1,12
+bm25_vector_graph_rrf,20,5,0.75,0.7125,0.725,0.19,0.7125,1454.03,14,0,0,0,0
+graph,20,5,0.75,0.7125,0.7,0.19,0.7125,760.21,14,0,0,0,0
+bm25_vector_rrf_q015_rerank,20,5,0.45,0.3375,0.2683,0.11,0.3375,694.01,4,3,7,25,2
+bm25_vector_graph_rrf_q015_rerank,20,5,0.4,0.3,0.2558,0.09,0.3,1454.19,4,3,6,14,1

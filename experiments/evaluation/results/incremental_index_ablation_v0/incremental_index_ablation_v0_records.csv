@@ -1,0 +1,16 @@
+﻿run_id,transition,new_version,strategy,old_chunk_count,target_new_chunk_count,applied_chunk_count,unchanged_count,added_count,modified_count,deleted_count,embedding_recompute_count,text_upsert_count,delete_count,graph_cleanup_count,graph_rebuild_count,embedding_saved_ratio,stale_chunk_count,missing_chunk_count,query_pass_count,query_check_count,measured_embedding_count,measured_embedding_latency_ms,embedding_dim
+incremental_index_ablation_v0_001,v1_to_v2_threshold_update,v2,full_reindex,11,11,11,10,0,1,0,11,11,11,11,11,0.0,0,0,1,1,11,573.95,768
+incremental_index_ablation_v0_001,v1_to_v2_threshold_update,v2,incremental_with_graph_cleanup,11,11,11,10,0,1,0,1,1,0,1,1,0.9091,0,0,1,1,1,337.99,768
+incremental_index_ablation_v0_001,v1_to_v2_threshold_update,v2,incremental_without_delete,11,11,11,10,0,1,0,1,1,0,1,1,0.9091,0,0,1,1,1,331.33,768
+incremental_index_ablation_v0_001,v1_to_v2_threshold_update,v2,incremental_without_hash,11,11,11,10,0,1,0,0,0,0,0,0,1.0,1,0,0,1,0,0.0,
+incremental_index_ablation_v0_001,v1_to_v2_threshold_update,v2,unstable_chunk_id,11,11,11,10,0,1,0,11,11,11,11,11,0.0,11,11,1,1,11,435.51,768
+incremental_index_ablation_v0_001,v2_to_v3_add_followup,v3,full_reindex,11,12,12,11,1,0,0,12,12,11,11,12,0.0,0,0,1,1,12,461.81,768
+incremental_index_ablation_v0_001,v2_to_v3_add_followup,v3,incremental_with_graph_cleanup,11,12,12,11,1,0,0,1,1,0,0,1,0.9167,0,0,1,1,1,342.27,768
+incremental_index_ablation_v0_001,v2_to_v3_add_followup,v3,incremental_without_delete,11,12,12,11,1,0,0,1,1,0,0,1,0.9167,0,0,1,1,1,343.31,768
+incremental_index_ablation_v0_001,v2_to_v3_add_followup,v3,incremental_without_hash,11,12,12,11,1,0,0,1,1,0,0,1,0.9167,1,0,1,1,1,331.05,768
+incremental_index_ablation_v0_001,v2_to_v3_add_followup,v3,unstable_chunk_id,11,12,12,11,1,0,0,12,12,11,11,12,0.0,12,12,1,1,12,446.16,768
+incremental_index_ablation_v0_001,v3_to_v4_delete_control_system,v4,full_reindex,12,11,11,11,0,0,1,11,11,12,12,11,0.0,0,0,1,1,11,450.22,768
+incremental_index_ablation_v0_001,v3_to_v4_delete_control_system,v4,incremental_with_graph_cleanup,12,11,11,11,0,0,1,0,0,1,1,0,1.0,0,0,1,1,0,0.0,
+incremental_index_ablation_v0_001,v3_to_v4_delete_control_system,v4,incremental_without_delete,12,11,12,11,0,0,1,0,0,0,0,0,1.0,1,0,0,1,0,0.0,
+incremental_index_ablation_v0_001,v3_to_v4_delete_control_system,v4,incremental_without_hash,12,11,11,11,0,0,1,0,0,1,1,0,1.0,1,0,1,1,0,0.0,
+incremental_index_ablation_v0_001,v3_to_v4_delete_control_system,v4,unstable_chunk_id,12,11,11,11,0,0,1,11,11,12,12,11,0.0,11,11,1,1,11,439.48,768

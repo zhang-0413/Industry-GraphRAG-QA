@@ -1,0 +1,4 @@
+﻿strategy,samples,strict_pass_rate,avg_answer_point_coverage,avg_proxy_faithfulness,avg_llm_faithfulness,avg_proxy_answer_relevance,avg_llm_answer_relevance,avg_unsupported_claims,avg_missing_answer_points,avg_judge_latency_ms,parse_failures
+bm25,20,0.35,0.6283,0.8018,0.8075,0.6399,0.81,0.45,0.05,4770.21,1
+router,20,0.35,0.7033,0.8299,0.8633,0.6399,0.835,0.55,0.2,4756.41,0
+vector,20,0.5,0.6975,0.8252,0.9425,0.6935,0.8267,0.2,0.25,4800.75,0

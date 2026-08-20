@@ -1,0 +1,1047 @@
+﻿run_id,sample_id,question_type,difficulty,modalities,strategy,top_k,question,generated_answer,answer_point_coverage,faithfulness_proxy,answer_relevance_proxy,llm_faithfulness,llm_answer_relevance,supported_claim_count,unsupported_claim_count,claim_count,missing_answer_point_count,irrelevant_or_extra_count,directly_answers,strict_pass,judge_latency_ms,generation_latency_ms,context_chunk_ids,claims_json,missing_answer_points_json,irrelevant_or_extra_parts_json,relevance_reason,judge_raw_text,judge_parse_error
+llm_judge_eval_v0_001,EVAL-0001,fact,easy,text,bm25,5,What is BluePump-X100?,"BluePump-X100 is a high-pressure pump in the refinery cooling system that moves cooling water through Pipeline-7A during normal operation. It connects to Pipeline-7A and ReliefValve-RV9, which is installed on the discharge side of BluePump-X100.",1.0,1.0,1.0,1.0,0.9,3,0,3,0,3,1,1,5361.52,5361.0,doc_001_equipment-chunk-000 | doc_001_equipment-chunk-003 | doc_002_safety_rules-chunk-001 | doc_002_safety_rules-chunk-000 | doc_004_pipeline_inspection-chunk-000,"[{""claim"": ""BluePump-X100 is a high-pressure pump"", ""verdict"": ""supported"", ""reason"": ""Context directly states BluePump-X100 is a high-pressure pump.""}, {""claim"": ""BluePump-X100 belongs to the refinery cooling system"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 is in the refinery cooling system.""}, {""claim"": ""BluePump-X100 moves cooling water through Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 moves cooling water through Pipeline-7A during normal operation.""}]",[],"[""It connects to Pipeline-7A and ReliefValve-RV9"", ""It connects to ReliefValve-RV9 and Sensor P-210"", ""It connects to ReliefValve-RV9 and Sensor T-200""]",The answer directly answers the question and covers all expected points without missing any.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 is a high-pressure pump"", ""verdict"": ""supported"", ""reason"": ""Context directly states BluePump-X100 is a high-pressure pump.""},
+      {""claim"": ""BluePump-X100 belongs to the refinery cooling system"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 is in the refinery cooling system.""},
+      {""claim"": ""BluePump-X100 moves cooling water through Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 moves cooling water through Pipeline-7A during normal operation.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""It connects to Pipeline-7A and ReliefValve-RV9"", ""It connects to ReliefValve-RV9 and Sensor P-210"", ""It connects to ReliefValve-RV9 and Sensor T-200""],
+    ""reason"": ""The answer directly answers the question and covers all expected points without missing any.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0001,fact,easy,text,vector,5,What is BluePump-X100?,"BluePump-X100 is a high-pressure pump in the refinery cooling system that moves cooling water through Pipeline-7A. It connects to Pipeline-7A and ReliefValve-RV9, which is a required pressure protection device installed on the discharge side of BluePump-X100. ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100.",1.0,1.0,1.0,1.0,0.9,3,0,3,0,3,1,1,5690.59,5690.51,doc_001_equipment-chunk-000 | doc_002_safety_rules-chunk-000 | doc_003_incident_report-chunk-000 | doc_004_pipeline_inspection-chunk-000 | doc_001_equipment-chunk-001,"[{""claim"": ""BluePump-X100 is a high-pressure pump"", ""verdict"": ""supported"", ""reason"": ""Context directly states BluePump-X100 is a high-pressure pump.""}, {""claim"": ""BluePump-X100 belongs to the refinery cooling system"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 is in the refinery cooling system.""}, {""claim"": ""BluePump-X100 moves cooling water through Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 moves cooling water through Pipeline-7A during normal operation.""}]",[],"[""It connects to Pipeline-7A and ReliefValve-RV9"", ""It connects to Pipeline-7A and ReliefValve-RV9, which is a required pressure protection device installed on the discharge side of BluePump-X100."", ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100.""]",The answer directly addresses all expected points and does not include irrelevant or extra details.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 is a high-pressure pump"", ""verdict"": ""supported"", ""reason"": ""Context directly states BluePump-X100 is a high-pressure pump.""},
+      {""claim"": ""BluePump-X100 belongs to the refinery cooling system"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 is in the refinery cooling system.""},
+      {""claim"": ""BluePump-X100 moves cooling water through Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 moves cooling water through Pipeline-7A during normal operation.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""It connects to Pipeline-7A and ReliefValve-RV9"", ""It connects to Pipeline-7A and ReliefValve-RV9, which is a required pressure protection device installed on the discharge side of BluePump-X100."", ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100.""],
+    ""reason"": ""The answer directly addresses all expected points and does not include irrelevant or extra details.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0001,fact,easy,text,router,5,What is BluePump-X100?,"BluePump-X100 is a high-pressure pump in the refinery cooling system that moves cooling water through Pipeline-7A during normal operation. It connects to Pipeline-7A and ReliefValve-RV9, which is installed on the discharge side of BluePump-X100.",1.0,1.0,1.0,1.0,0.9,3,0,3,0,3,1,1,5254.8,5254.71,doc_001_equipment-chunk-000 | doc_001_equipment-chunk-003 | doc_002_safety_rules-chunk-001 | doc_002_safety_rules-chunk-000 | doc_004_pipeline_inspection-chunk-000,"[{""claim"": ""BluePump-X100 is a high-pressure pump"", ""verdict"": ""supported"", ""reason"": ""Context directly states BluePump-X100 is a high-pressure pump.""}, {""claim"": ""BluePump-X100 belongs to the refinery cooling system"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 is in the refinery cooling system.""}, {""claim"": ""BluePump-X100 moves cooling water through Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 moves cooling water through Pipeline-7A during normal operation.""}]",[],"[""It connects to Pipeline-7A and ReliefValve-RV9"", ""It connects to ReliefValve-RV9 and Sensor P-210"", ""It connects to ReliefValve-RV9 and Sensor T-200""]",The answer directly answers the question and covers all expected points without missing any.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 is a high-pressure pump"", ""verdict"": ""supported"", ""reason"": ""Context directly states BluePump-X100 is a high-pressure pump.""},
+      {""claim"": ""BluePump-X100 belongs to the refinery cooling system"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 is in the refinery cooling system.""},
+      {""claim"": ""BluePump-X100 moves cooling water through Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 moves cooling water through Pipeline-7A during normal operation.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""It connects to Pipeline-7A and ReliefValve-RV9"", ""It connects to ReliefValve-RV9 and Sensor P-210"", ""It connects to ReliefValve-RV9 and Sensor T-200""],
+    ""reason"": ""The answer directly answers the question and covers all expected points without missing any.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0002,fact,easy,text,bm25,5,Which pipeline does BluePump-X100 move cooling water through?,Pipeline-7A,0.5,1.0,0.0,0.5,0.6,1,1,2,0,1,1,0,4560.42,4560.35,doc_001_equipment-chunk-000 | doc_003_incident_report-chunk-001 | doc_001_equipment-chunk-003 | doc_001_equipment-chunk-001 | doc_002_safety_rules-chunk-000,"[{""claim"": ""BluePump-X100 moves cooling water"", ""verdict"": ""supported"", ""reason"": ""Context: BluePump-X100 moves cooling water through Pipeline-7A.""}, {""claim"": ""Pipeline-7A is the pipeline"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context for this claim. Pipeline-7A is a specific pipeline, not necessarily the only one used by BluePump-X100.""}]",[],"[""Pipeline-7A is the pipeline""]","Answer directly answers the question and covers all expected points, but Pipeline-7A is not the only pipeline used by BluePump-X100.","{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 moves cooling water"", ""verdict"": ""supported"", ""reason"": ""Context: BluePump-X100 moves cooling water through Pipeline-7A.""},
+      {""claim"": ""Pipeline-7A is the pipeline"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context for this claim. Pipeline-7A is a specific pipeline, not necessarily the only one used by BluePump-X100.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.6,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""Pipeline-7A is the pipeline""],
+    ""reason"": ""Answer directly answers the question and covers all expected points, but Pipeline-7A is not the only pipeline used by BluePump-X100.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0002,fact,easy,text,vector,5,Which pipeline does BluePump-X100 move cooling water through?,BluePump-X100 moves cooling water through Pipeline-7A.,1.0,1.0,0.6,0.5,0.8333,1,1,2,0,0,1,0,4376.56,4376.48,doc_001_equipment-chunk-000 | doc_001_equipment-chunk-003 | doc_004_pipeline_inspection-chunk-002 | doc_001_equipment-chunk-001 | doc_002_safety_rules-chunk-000,"[{""claim"": ""BluePump-X100 moves cooling water"", ""verdict"": ""supported"", ""reason"": ""Context: BluePump-X100 moves cooling water through Pipeline-7A.""}, {""claim"": ""Pipeline-7A is the pipeline"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context for Pipeline-7A being the pipeline.""}]",[],[],Answer directly answers the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 moves cooling water"", ""verdict"": ""supported"", ""reason"": ""Context: BluePump-X100 moves cooling water through Pipeline-7A.""},
+      {""claim"": ""Pipeline-7A is the pipeline"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context for Pipeline-7A being the pipeline.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.8333333333333334,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Answer directly answers the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0002,fact,easy,text,router,5,Which pipeline does BluePump-X100 move cooling water through?,Pipeline-7A,0.5,1.0,0.0,0.5,0.6,1,1,2,0,1,1,0,4548.87,4548.79,doc_001_equipment-chunk-000 | doc_003_incident_report-chunk-001 | doc_001_equipment-chunk-003 | doc_001_equipment-chunk-001 | doc_002_safety_rules-chunk-000,"[{""claim"": ""BluePump-X100 moves cooling water"", ""verdict"": ""supported"", ""reason"": ""Context: BluePump-X100 moves cooling water through Pipeline-7A.""}, {""claim"": ""Pipeline-7A is the pipeline"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context for this claim. Pipeline-7A is a specific pipeline, not necessarily the only one used by BluePump-X100.""}]",[],"[""Pipeline-7A is the pipeline""]","Answer directly answers the question and covers all expected points, but Pipeline-7A is not the only pipeline used by BluePump-X100.","{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 moves cooling water"", ""verdict"": ""supported"", ""reason"": ""Context: BluePump-X100 moves cooling water through Pipeline-7A.""},
+      {""claim"": ""Pipeline-7A is the pipeline"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context for this claim. Pipeline-7A is a specific pipeline, not necessarily the only one used by BluePump-X100.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.6,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""Pipeline-7A is the pipeline""],
+    ""reason"": ""Answer directly answers the question and covers all expected points, but Pipeline-7A is not the only pipeline used by BluePump-X100.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0003,fact,easy,text,bm25,5,What is Filter-F33?,Filter-F33,0.0,0.0,1.0,1.0,0.9,3,0,3,0,0,1,0,4514.89,4514.81,doc_001_equipment-chunk-003 | doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-003 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-002,"[{""claim"": ""Filter-F33 is installed upstream of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}, {""claim"": ""Filter-F33 blockage can reduce cooling water flow"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}, {""claim"": ""Filter-F33 affects BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}]",[],[],Generated answer directly covers all expected answer points without missing any information.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Filter-F33 is installed upstream of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""},
+      {""claim"": ""Filter-F33 blockage can reduce cooling water flow"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""},
+      {""claim"": ""Filter-F33 affects BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly covers all expected answer points without missing any information.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0003,fact,easy,text,vector,5,What is Filter-F33?,Filter-F33,0.0,0.0,1.0,1.0,0.9,3,0,3,0,0,1,0,4328.55,4328.47,doc_001_equipment-chunk-003 | doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-003 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-002,"[{""claim"": ""Filter-F33 is installed upstream of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}, {""claim"": ""Filter-F33 blockage can reduce cooling water flow"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}, {""claim"": ""Filter-F33 affects BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}]",[],[],Generated answer directly covers all expected answer points without missing any information.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Filter-F33 is installed upstream of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""},
+      {""claim"": ""Filter-F33 blockage can reduce cooling water flow"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""},
+      {""claim"": ""Filter-F33 affects BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly covers all expected answer points without missing any information.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0003,fact,easy,text,router,5,What is Filter-F33?,Filter-F33,0.0,0.0,1.0,1.0,0.9,3,0,3,0,0,1,0,4311.96,4311.87,doc_001_equipment-chunk-003 | doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-003 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-002,"[{""claim"": ""Filter-F33 is installed upstream of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}, {""claim"": ""Filter-F33 blockage can reduce cooling water flow"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}, {""claim"": ""Filter-F33 affects BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}]",[],[],Generated answer directly covers all expected answer points without missing any information.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Filter-F33 is installed upstream of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""},
+      {""claim"": ""Filter-F33 blockage can reduce cooling water flow"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""},
+      {""claim"": ""Filter-F33 affects BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context [1] supports this claim.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly covers all expected answer points without missing any information.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0004,entity_relation,easy,text,bm25,5,What does Safety-Regulation-42 require for BluePump-X100?,Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.,1.0,1.0,0.6667,1.0,0.9,3,0,3,0,0,1,1,5392.77,5392.68,doc_002_safety_rules-chunk-000 | doc_002_safety_rules-chunk-002 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-000 | doc_001_equipment-chunk-000,"[{""claim"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}, {""claim"": ""Safety-Regulation-42 applies to BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}, {""claim"": ""BluePump-X100 must install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}]",[],[],Generated answer directly addresses Safety-Regulation-42 and BluePump-X100's requirement for ReliefValve-RV9.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""},
+      {""claim"": ""Safety-Regulation-42 applies to BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""},
+      {""claim"": ""BluePump-X100 must install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly addresses Safety-Regulation-42 and BluePump-X100's requirement for ReliefValve-RV9.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0004,entity_relation,easy,text,vector,5,What does Safety-Regulation-42 require for BluePump-X100?,"Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9, a required pressure protection device.",1.0,1.0,0.6667,1.0,0.9,3,0,3,0,1,1,1,5513.95,5513.86,doc_002_safety_rules-chunk-000 | doc_002_safety_rules-chunk-002 | doc_001_equipment-chunk-000 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-002,"[{""claim"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}, {""claim"": ""Safety-Regulation-42 applies to BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}, {""claim"": ""BluePump-X100 must install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}]",[],"[""a required pressure protection device""]","Answer directly addresses Safety-Regulation-42 and BluePump-X100's requirement for ReliefValve-RV9, but includes an irrelevant detail.","{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""},
+      {""claim"": ""Safety-Regulation-42 applies to BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""},
+      {""claim"": ""BluePump-X100 must install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""a required pressure protection device""],
+    ""reason"": ""Answer directly addresses Safety-Regulation-42 and BluePump-X100's requirement for ReliefValve-RV9, but includes an irrelevant detail.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0004,entity_relation,easy,text,router,5,What does Safety-Regulation-42 require for BluePump-X100?,Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.,1.0,1.0,0.6667,1.0,0.9,3,0,3,0,0,1,1,5265.44,5265.36,doc_002_safety_rules-chunk-000 | doc_002_safety_rules-chunk-002 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-000 | doc_001_equipment-chunk-000,"[{""claim"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}, {""claim"": ""Safety-Regulation-42 applies to BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}, {""claim"": ""BluePump-X100 must install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}]",[],[],Generated answer directly addresses Safety-Regulation-42 and BluePump-X100's requirement for ReliefValve-RV9.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""},
+      {""claim"": ""Safety-Regulation-42 applies to BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""},
+      {""claim"": ""BluePump-X100 must install ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly addresses Safety-Regulation-42 and BluePump-X100's requirement for ReliefValve-RV9.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0005,cross_paragraph,medium,text,bm25,5,Which sensors report to ControlSystem-CS1?,ControlSystem-CS1,0.0,0.0,0.3333,1.0,0.9,2,0,2,0,0,1,0,4204.19,4204.1,doc_001_equipment-chunk-001 | doc_001_equipment-chunk-002 | doc_003_incident_report-chunk-000 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-003,"[{""claim"": ""Sensor T-200 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim directly.""}, {""claim"": ""Sensor P-210 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim directly.""}]",[],[],The answer directly addresses the question and covers all expected points without missing any.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Sensor T-200 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim directly.""},
+      {""claim"": ""Sensor P-210 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim directly.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The answer directly addresses the question and covers all expected points without missing any.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0005,cross_paragraph,medium,text,vector,5,Which sensors report to ControlSystem-CS1?,Sensor T-200 and Sensor P-210 report to ControlSystem-CS1.,1.0,1.0,0.6667,0.8,0.9,4,1,5,0,0,1,1,5868.34,5868.27,doc_001_equipment-chunk-002 | doc_002_safety_rules-chunk-002 | doc_001_equipment-chunk-001 | doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-003,"[{""claim"": ""Sensor T-200 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor T-200 and Sensor P-200.""}, {""claim"": ""Sensor P-210 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in the context.""}, {""claim"": ""Sensor T-200 reports to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor T-200.""}, {""claim"": ""Sensor P-210 reports to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor P-210.""}, {""claim"": ""Sensor T-200 and Sensor P-210 report anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from both sensors.""}]",[],[],The answer directly addresses the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Sensor T-200 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor T-200 and Sensor P-200.""},
+      {""claim"": ""Sensor P-210 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in the context.""},
+      {""claim"": ""Sensor T-200 reports to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor T-200.""},
+      {""claim"": ""Sensor P-210 reports to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor P-210.""},
+      {""claim"": ""Sensor T-200 and Sensor P-210 report anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from both sensors.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The answer directly addresses the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0005,cross_paragraph,medium,text,router,5,Which sensors report to ControlSystem-CS1?,ControlSystem-CS1 reports to Sensor T-200 and Sensor P-210.,1.0,1.0,0.3333,0.8,0.5,4,1,5,2,1,1,0,6176.27,6176.19,doc_001_equipment-chunk-002 | doc_001_equipment-chunk-001 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-003,"[{""claim"": ""Sensor T-200 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor T-200""}, {""claim"": ""Sensor P-210 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor P-210""}, {""claim"": ""Sensor T-200 reports to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""Sensor T-200 reports abnormal temperature events to ControlSystem-CS1""}, {""claim"": ""Sensor P-210 reports to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""Sensor P-210 reports high-pressure alarms to ControlSystem-CS1""}, {""claim"": ""ControlSystem-CS1 reports to Sensor T-200 and Sensor P-210"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in the context""}]","[""- Sensor T-200 reports to ControlSystem-CS1"", ""- Sensor P-210 reports to ControlSystem-CS1""]","[""ControlSystem-CS1 reports to Sensor T-200 and Sensor P-210""]",Answer covers main points but misses specific sensor-reporting details and is incomplete.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Sensor T-200 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor T-200""},
+      {""claim"": ""Sensor P-210 reports anomaly or alarm events to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives anomaly reports from Sensor P-210""},
+      {""claim"": ""Sensor T-200 reports to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""Sensor T-200 reports abnormal temperature events to ControlSystem-CS1""},
+      {""claim"": ""Sensor P-210 reports to ControlSystem-CS1"", ""verdict"": ""supported"", ""reason"": ""Sensor P-210 reports high-pressure alarms to ControlSystem-CS1""},
+      {""claim"": ""ControlSystem-CS1 reports to Sensor T-200 and Sensor P-210"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in the context""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.5,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [""- Sensor T-200 reports to ControlSystem-CS1"", ""- Sensor P-210 reports to ControlSystem-CS1""],
+    ""irrelevant_or_extra_parts"": [""ControlSystem-CS1 reports to Sensor T-200 and Sensor P-210""],
+    ""reason"": ""Answer covers main points but misses specific sensor-reporting details and is incomplete.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0006,entity_relation,easy,text,bm25,5,What does Sensor T-200 monitor?,Sensor T-200 monitors BluePump-X100 outlet temperature.,1.0,1.0,0.6667,1.0,0.9,2,0,2,0,0,1,1,4500.45,4500.37,doc_001_equipment-chunk-001 | doc_004_pipeline_inspection-chunk-000 | doc_001_equipment-chunk-002 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-000,"[{""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context directly states Sensor T-200 monitors BluePump-X100 outlet temperature.""}, {""claim"": ""The monitored equipment is BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context directly states Sensor T-200 monitors BluePump-X100 outlet temperature.""}]",[],[],The answer directly addresses the question and covers all expected points without missing any.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context directly states Sensor T-200 monitors BluePump-X100 outlet temperature.""},
+      {""claim"": ""The monitored equipment is BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context directly states Sensor T-200 monitors BluePump-X100 outlet temperature.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The answer directly addresses the question and covers all expected points without missing any.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0006,entity_relation,easy,text,vector,5,What does Sensor T-200 monitor?,Sensor T-200 monitors BluePump-X100 outlet temperature.,1.0,1.0,0.6667,1.0,0.9,2,0,2,0,0,1,1,4285.1,4285.02,doc_002_safety_rules-chunk-002 | doc_001_equipment-chunk-001 | doc_001_equipment-chunk-002 | doc_004_pipeline_inspection-chunk-000 | doc_003_incident_report-chunk-000,"[{""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context mentions Sensor T-200 monitors BluePump-X100 outlet temperature.""}, {""claim"": ""The monitored equipment is BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 monitors BluePump-X100 outlet temperature.""}]",[],[],Generated answer directly addresses the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context mentions Sensor T-200 monitors BluePump-X100 outlet temperature.""},
+      {""claim"": ""The monitored equipment is BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 monitors BluePump-X100 outlet temperature.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly addresses the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0006,entity_relation,easy,text,router,5,What does Sensor T-200 monitor?,Sensor T-200 monitors BluePump-X100 outlet temperature.,1.0,1.0,0.6667,1.0,0.9,2,0,2,0,0,1,1,4359.41,4359.34,doc_001_equipment-chunk-001 | doc_004_pipeline_inspection-chunk-000 | doc_001_equipment-chunk-002 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-000,"[{""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context directly states Sensor T-200 monitors BluePump-X100 outlet temperature.""}, {""claim"": ""The monitored equipment is BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context directly states Sensor T-200 monitors BluePump-X100 outlet temperature.""}]",[],[],The answer directly addresses the question and covers all expected points without missing any.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context directly states Sensor T-200 monitors BluePump-X100 outlet temperature.""},
+      {""claim"": ""The monitored equipment is BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context directly states Sensor T-200 monitors BluePump-X100 outlet temperature.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The answer directly addresses the question and covers all expected points without missing any.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0007,numeric,easy,text,bm25,5,What is the design pressure of Pipeline-7A?,The design pressure of Pipeline-7A is 10 MPa.,1.0,1.0,1.0,0.3333,0.9,1,2,3,0,2,1,0,4749.1,4748.97,doc_002_safety_rules-chunk-001 | doc_001_equipment-chunk-000 | doc_001_equipment-chunk-003 | doc_002_safety_rules-chunk-000 | doc_004_pipeline_inspection-chunk-002,"[{""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""supported"", ""reason"": ""Directly stated in the context""}, {""claim"": ""The alarm threshold for Pipeline-7A is 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Not directly supported by the context""}, {""claim"": ""Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Not directly supported by the context""}]",[],"[""The alarm threshold for Pipeline-7A is 9.5 MPa."", ""Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""]",Directly answers the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""supported"", ""reason"": ""Directly stated in the context""},
+      {""claim"": ""The alarm threshold for Pipeline-7A is 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Not directly supported by the context""},
+      {""claim"": ""Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Not directly supported by the context""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""The alarm threshold for Pipeline-7A is 9.5 MPa."", ""Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""],
+    ""reason"": ""Directly answers the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0007,numeric,easy,text,vector,5,What is the design pressure of Pipeline-7A?,The design pressure of Pipeline-7A is 10 MPa.,1.0,1.0,1.0,1.0,0.9,5,0,5,0,0,1,1,5571.28,5571.18,doc_002_safety_rules-chunk-001 | doc_004_pipeline_inspection-chunk-001 | doc_002_safety_rules-chunk-000 | doc_004_pipeline_inspection-chunk-002 | doc_003_incident_report-chunk-002,"[{""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states Pipeline-7A design pressure is 10 MPa.""}, {""claim"": ""The alarm threshold for Pipeline-7A is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states the alarm threshold for Pipeline-7A is 9.5 MPa.""}, {""claim"": ""Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""}, {""claim"": ""Inspection pressure records for Pipeline-7A show a measured pressure of 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records show Pipeline-7A measured pressure is 8.8 MPa.""}, {""claim"": ""ReliefValve-RV9 must keep its set pressure below 1.1 times the pipeline design pressure"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 states ReliefValve-RV9 must keep its set pressure below 1.1 times the pipeline design pressure.""}]",[],[],The generated answer directly and accurately covers the expected answer points without missing any information or including irrelevant details.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states Pipeline-7A design pressure is 10 MPa.""},
+      {""claim"": ""The alarm threshold for Pipeline-7A is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states the alarm threshold for Pipeline-7A is 9.5 MPa.""},
+      {""claim"": ""Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""},
+      {""claim"": ""Inspection pressure records for Pipeline-7A show a measured pressure of 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records show Pipeline-7A measured pressure is 8.8 MPa.""},
+      {""claim"": ""ReliefValve-RV9 must keep its set pressure below 1.1 times the pipeline design pressure"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 states ReliefValve-RV9 must keep its set pressure below 1.1 times the pipeline design pressure.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The generated answer directly and accurately covers the expected answer points without missing any information or including irrelevant details.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0007,numeric,easy,text,router,5,What is the design pressure of Pipeline-7A?,The design pressure of Pipeline-7A is 10 MPa.,1.0,1.0,1.0,0.6,0.9,3,2,5,0,0,1,0,5189.14,5189.02,doc_002_safety_rules-chunk-001 | doc_001_equipment-chunk-000 | doc_001_equipment-chunk-003 | doc_002_safety_rules-chunk-000 | doc_004_pipeline_inspection-chunk-002,"[{""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states Pipeline-7A design pressure is 10 MPa.""}, {""claim"": ""The alarm threshold for Pipeline-7A is 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Context does not provide the alarm threshold, only the design pressure.""}, {""claim"": ""Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Context does not mention Sensor P-210 or its alarm threshold.""}, {""claim"": ""BluePump-X100 is a high-pressure pump in the refinery cooling system"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 is a high-pressure pump in the refinery cooling system.""}, {""claim"": ""BluePump-X100 connects to Pipeline-7A and ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 connects to Pipeline-7A and ReliefValve-RV9.""}]",[],[],The generated answer directly and completely covers the expected answer points without any missing or irrelevant information.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states Pipeline-7A design pressure is 10 MPa.""},
+      {""claim"": ""The alarm threshold for Pipeline-7A is 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Context does not provide the alarm threshold, only the design pressure.""},
+      {""claim"": ""Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Context does not mention Sensor P-210 or its alarm threshold.""},
+      {""claim"": ""BluePump-X100 is a high-pressure pump in the refinery cooling system"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 is a high-pressure pump in the refinery cooling system.""},
+      {""claim"": ""BluePump-X100 connects to Pipeline-7A and ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 connects to Pipeline-7A and ReliefValve-RV9.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The generated answer directly and completely covers the expected answer points without any missing or irrelevant information.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0008,numeric,easy,text,bm25,5,What is the alarm threshold for Pipeline-7A?,The alarm threshold for Pipeline-7A is 9.5 MPa.,1.0,1.0,1.0,0.8,0.9,4,1,5,0,0,1,1,5444.53,5444.43,doc_002_safety_rules-chunk-001 | doc_004_pipeline_inspection-chunk-001 | doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-002 | doc_001_equipment-chunk-000,"[{""claim"": ""Pipeline-7A alarm threshold is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the alarm threshold for Pipeline-7A is 9.5 MPa.""}, {""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Context does not provide the design pressure of Pipeline-7A, only the alarm threshold.""}, {""claim"": ""Sensor P-210 triggers a high-pressure alarm at 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""}, {""claim"": ""Pipeline-7A measured pressure during inspection was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states the measured Pipeline-7A pressure during the inspection was 8.8 MPa, below the alarm threshold.""}, {""claim"": ""Pipeline-7A alarm threshold is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the alarm threshold for Pipeline-7A is 9.5 MPa.""}]",[],[],The generated answer directly and accurately covers all expected answer points without any missing information or irrelevant details.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A alarm threshold is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the alarm threshold for Pipeline-7A is 9.5 MPa.""},
+      {""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Context does not provide the design pressure of Pipeline-7A, only the alarm threshold.""},
+      {""claim"": ""Sensor P-210 triggers a high-pressure alarm at 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""},
+      {""claim"": ""Pipeline-7A measured pressure during inspection was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states the measured Pipeline-7A pressure during the inspection was 8.8 MPa, below the alarm threshold.""},
+      {""claim"": ""Pipeline-7A alarm threshold is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the alarm threshold for Pipeline-7A is 9.5 MPa.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The generated answer directly and accurately covers all expected answer points without any missing information or irrelevant details.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0008,numeric,easy,text,vector,5,What is the alarm threshold for Pipeline-7A?,The alarm threshold for Pipeline-7A is 9.5 MPa.,1.0,1.0,1.0,1.0,0.9,1,0,1,0,0,1,1,3765.73,3765.64,doc_002_safety_rules-chunk-001 | doc_004_pipeline_inspection-chunk-001 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-002,"[{""claim"": ""Pipeline-7A alarm threshold is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the alarm threshold for Pipeline-7A is 9.5 MPa.""}]",[],[],"Answer directly states the alarm threshold for Pipeline-7A is 9.5 MPa, matching the expected points and supported by the context.","{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A alarm threshold is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the alarm threshold for Pipeline-7A is 9.5 MPa.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Answer directly states the alarm threshold for Pipeline-7A is 9.5 MPa, matching the expected points and supported by the context.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0008,numeric,easy,text,router,5,What is the alarm threshold for Pipeline-7A?,The alarm threshold for Pipeline-7A is 9.5 MPa.,1.0,1.0,1.0,0.8,0.9,4,1,5,0,3,1,1,5875.64,5875.56,doc_002_safety_rules-chunk-001 | doc_004_pipeline_inspection-chunk-001 | doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-002 | doc_001_equipment-chunk-000,"[{""claim"": ""Pipeline-7A alarm threshold is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the alarm threshold for Pipeline-7A is 9.5 MPa.""}, {""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Context does not provide the design pressure of Pipeline-7A, only the alarm threshold.""}, {""claim"": ""Sensor P-210 triggers a high-pressure alarm at 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""}, {""claim"": ""Pipeline-7A measured pressure during inspection was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states the measured Pipeline-7A pressure during the inspection was 8.8 MPa, below the alarm threshold.""}, {""claim"": ""Pipeline-7A connects to ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 connects to Pipeline-7A and ReliefValve-RV9.""}]",[],"[""The design pressure of Pipeline-7A is 10 MPa."", ""Sensor P-210 did not report a high-pressure alarm for Pipeline-7A during the event."", ""The maintenance team inspected BluePump-X100, ReliefValve-RV9, and Filter-F33.""]",The answer directly states the alarm threshold for Pipeline-7A is 9.5 MPa and covers all expected points without missing any.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A alarm threshold is 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the alarm threshold for Pipeline-7A is 9.5 MPa.""},
+      {""claim"": ""Pipeline-7A design pressure is 10 MPa"", ""verdict"": ""unsupported"", ""reason"": ""Context does not provide the design pressure of Pipeline-7A, only the alarm threshold.""},
+      {""claim"": ""Sensor P-210 triggers a high-pressure alarm at 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""},
+      {""claim"": ""Pipeline-7A measured pressure during inspection was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states the measured Pipeline-7A pressure during the inspection was 8.8 MPa, below the alarm threshold.""},
+      {""claim"": ""Pipeline-7A connects to ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Context states BluePump-X100 connects to Pipeline-7A and ReliefValve-RV9.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""The design pressure of Pipeline-7A is 10 MPa."", ""Sensor P-210 did not report a high-pressure alarm for Pipeline-7A during the event."", ""The maintenance team inspected BluePump-X100, ReliefValve-RV9, and Filter-F33.""],
+    ""reason"": ""The answer directly states the alarm threshold for Pipeline-7A is 9.5 MPa and covers all expected points without missing any.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0009,numeric,medium,text,bm25,5,When must Sensor P-210 trigger a high-pressure alarm?,Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.,1.0,1.0,1.0,1.0,0.9,2,0,2,0,0,1,1,4182.93,4182.85,doc_002_safety_rules-chunk-001 | doc_001_equipment-chunk-001 | doc_003_incident_report-chunk-000 | doc_001_equipment-chunk-002 | doc_004_pipeline_inspection-chunk-000,"[{""claim"": ""Sensor P-210 triggers high-pressure alarm"", ""verdict"": ""supported"", ""reason"": ""Context directly supports this claim.""}, {""claim"": ""The trigger condition is Pipeline-7A pressure reaching 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly supports this claim.""}]",[],[],Generated answer directly addresses the question and covers all expected answer points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Sensor P-210 triggers high-pressure alarm"", ""verdict"": ""supported"", ""reason"": ""Context directly supports this claim.""},
+      {""claim"": ""The trigger condition is Pipeline-7A pressure reaching 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly supports this claim.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly addresses the question and covers all expected answer points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0009,numeric,medium,text,vector,5,When must Sensor P-210 trigger a high-pressure alarm?,Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.,1.0,1.0,1.0,1.0,0.9,2,0,2,0,0,1,1,4394.77,4394.68,doc_002_safety_rules-chunk-001 | doc_001_equipment-chunk-001 | doc_003_incident_report-chunk-000 | doc_004_pipeline_inspection-chunk-001 | doc_002_safety_rules-chunk-002,"[{""claim"": ""Sensor P-210 triggers high-pressure alarm"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""}, {""claim"": ""The trigger condition is Pipeline-7A pressure reaching 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""}]",[],[],Answer directly addresses the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""Sensor P-210 triggers high-pressure alarm"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""},
+      {""claim"": ""The trigger condition is Pipeline-7A pressure reaching 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Answer directly addresses the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0009,numeric,medium,text,router,5,When must Sensor P-210 trigger a high-pressure alarm?,Sensor P-210 must trigger a high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.,1.0,1.0,1.0,1.0,0.9,2,0,2,0,0,1,1,4366.39,4366.3,doc_002_safety_rules-chunk-001 | doc_001_equipment-chunk-001 | doc_003_incident_report-chunk-000 | doc_001_equipment-chunk-002 | doc_004_pipeline_inspection-chunk-000,"[{""claim"": ""Sensor P-210 triggers high-pressure alarm"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""}, {""claim"": ""The trigger condition is Pipeline-7A pressure reaching 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""}]",[],[],Generated answer directly addresses the question and covers all expected answer points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""Sensor P-210 triggers high-pressure alarm"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""},
+      {""claim"": ""The trigger condition is Pipeline-7A pressure reaching 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor P-210 triggers high-pressure alarm when Pipeline-7A pressure reaches 9.5 MPa.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly addresses the question and covers all expected answer points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0010,causal_reasoning,medium,text,bm25,5,What happened in incident IR-2024-017?,"Filter-F33 was replaced and the inlet screen of Pipeline-7A was cleaned, which resolved the abnormal outlet temperature reported by Sensor T-200 for BluePump-X100. However, the context does not provide details about the specific incident IR-2024-017 other than the above information.",0.5,0.5652,0.6667,0.75,0.5,3,1,4,1,1,1,0,6257.26,6257.17,doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-000 | doc_004_pipeline_inspection-chunk-000 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-002,"[{""claim"": ""Sensor T-200 reported abnormal outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context mentions Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""}, {""claim"": ""BluePump-X100 was involved"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""}, {""claim"": ""ControlSystem-CS1 triggered inspection workflow"", ""verdict"": ""supported"", ""reason"": ""Context states ControlSystem-CS1 triggered an inspection workflow for incident IR-2024-017.""}, {""claim"": ""Partial blockage in Filter-F33 was the root cause"", ""verdict"": ""unsupported"", ""reason"": ""Context does not mention Filter-F33 as the root cause, only as part of the issue resolution.""}]","[""Partial blockage in Filter-F33 was the root cause""]","[""Filter-F33 was replaced and the inlet screen of Pipeline-7A was cleaned, which resolved the abnormal outlet temperature reported by Sensor T-200 for BluePump-X100. However, the context does not provide details about the specific incident IR-2024-017 other than the above information.""]",The answer covers the main points but misses the root cause and includes irrelevant details.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Sensor T-200 reported abnormal outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context mentions Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""},
+      {""claim"": ""BluePump-X100 was involved"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""},
+      {""claim"": ""ControlSystem-CS1 triggered inspection workflow"", ""verdict"": ""supported"", ""reason"": ""Context states ControlSystem-CS1 triggered an inspection workflow for incident IR-2024-017.""},
+      {""claim"": ""Partial blockage in Filter-F33 was the root cause"", ""verdict"": ""unsupported"", ""reason"": ""Context does not mention Filter-F33 as the root cause, only as part of the issue resolution.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.5,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [""Partial blockage in Filter-F33 was the root cause""],
+    ""irrelevant_or_extra_parts"": [""Filter-F33 was replaced and the inlet screen of Pipeline-7A was cleaned, which resolved the abnormal outlet temperature reported by Sensor T-200 for BluePump-X100. However, the context does not provide details about the specific incident IR-2024-017 other than the above information.""],
+    ""reason"": ""The answer covers the main points but misses the root cause and includes irrelevant details.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0010,causal_reasoning,medium,text,vector,5,What happened in incident IR-2024-017?,"The incident IR-2024-017 involved abnormal outlet temperature for BluePump-X100, leading to an inspection workflow triggered by ControlSystem-CS1. Sensor P-210 did not report a high-pressure alarm for Pipeline-7A during the same event. The maintenance team replaced Filter-F33 and cleaned the inlet screen of Pipeline-7A, which resolved the abnormal temperature issue. Inspection results showed that ReliefValve-RV9 passed visual inspection and its set pressure record was verified. The measured pressure during the inspection was 8.8 MPa",0.75,0.85,0.6667,0.75,0.6,3,1,4,1,2,1,0,6129.98,6129.9,doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-003 | doc_004_pipeline_inspection-chunk-000 | doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-002,"[{""claim"": ""Sensor T-200 reported abnormal outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context mentions Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""}, {""claim"": ""BluePump-X100 was involved"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""}, {""claim"": ""ControlSystem-CS1 triggered inspection workflow"", ""verdict"": ""supported"", ""reason"": ""Context states ControlSystem-CS1 triggered an inspection workflow for incident IR-2024-017.""}, {""claim"": ""Partial blockage in Filter-F33 was the root cause"", ""verdict"": ""unsupported"", ""reason"": ""Context states the abnormal temperature was associated with partial blockage in Filter-F33, but does not explicitly state it was the root cause.""}]","[""Partial blockage in Filter-F33 was the root cause""]","[""The maintenance team replaced Filter-F33 and cleaned the inlet screen of Pipeline-7A."", ""The measured pressure during the inspection was 8.8 MPa, below the 9.5 MPa alarm threshold.""]",The answer covers the expected points but does not mention the root cause being partial blockage in Filter-F33.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Sensor T-200 reported abnormal outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context mentions Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""},
+      {""claim"": ""BluePump-X100 was involved"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""},
+      {""claim"": ""ControlSystem-CS1 triggered inspection workflow"", ""verdict"": ""supported"", ""reason"": ""Context states ControlSystem-CS1 triggered an inspection workflow for incident IR-2024-017.""},
+      {""claim"": ""Partial blockage in Filter-F33 was the root cause"", ""verdict"": ""unsupported"", ""reason"": ""Context states the abnormal temperature was associated with partial blockage in Filter-F33, but does not explicitly state it was the root cause.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.6,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [""Partial blockage in Filter-F33 was the root cause""],
+    ""irrelevant_or_extra_parts"": [""The maintenance team replaced Filter-F33 and cleaned the inlet screen of Pipeline-7A."", ""The measured pressure during the inspection was 8.8 MPa, below the 9.5 MPa alarm threshold.""],
+    ""reason"": ""The answer covers the expected points but does not mention the root cause being partial blockage in Filter-F33.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0010,causal_reasoning,medium,text,router,5,What happened in incident IR-2024-017?,"In incident IR-2024-017, Sensor T-200 reported abnormal outlet temperature for BluePump-X100, leading to an inspection workflow triggered by ControlSystem-CS1. Sensor P-210 did not report a high-pressure alarm for Pipeline-7A during the same event. The abnormal temperature was associated with partial blockage in Filter-F33, which reduced cooling water flow through Pipeline-7A. After the maintenance team replaced Filter-F33 and cleaned the inlet screen of Pipeline-7A, Sensor T-200 returned",1.0,0.9714,0.6667,0.75,0.7,3,1,4,1,4,1,0,5709.36,5709.28,doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-002 | doc_001_equipment-chunk-002,"[{""claim"": ""Sensor T-200 reported abnormal outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""}, {""claim"": ""BluePump-X100 was involved"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""}, {""claim"": ""ControlSystem-CS1 triggered inspection workflow"", ""verdict"": ""supported"", ""reason"": ""Context states ControlSystem-CS1 triggered an inspection workflow for incident IR-2024-017.""}, {""claim"": ""Partial blockage in Filter-F33 was the root cause"", ""verdict"": ""unsupported"", ""reason"": ""Context states partial blockage in Filter-F33 reduced cooling water flow, but does not state it was the root cause.""}]","[""Partial blockage in Filter-F33 was the root cause""]","[""Sensor P-210 did not report a high-pressure alarm for Pipeline-7A."", ""The abnormal temperature was associated with partial blockage in Filter-F33."", ""The maintenance team replaced Filter-F33 and cleaned the inlet screen of Pipeline-7A."", ""The measured Pipeline-7A pressure during the inspection was 8.8 MPa, below the 9.5 MPa alarm threshold.""]",Answer covers all expected points and is relevant to the question.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""Sensor T-200 reported abnormal outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""},
+      {""claim"": ""BluePump-X100 was involved"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 reported abnormal outlet temperature for BluePump-X100.""},
+      {""claim"": ""ControlSystem-CS1 triggered inspection workflow"", ""verdict"": ""supported"", ""reason"": ""Context states ControlSystem-CS1 triggered an inspection workflow for incident IR-2024-017.""},
+      {""claim"": ""Partial blockage in Filter-F33 was the root cause"", ""verdict"": ""unsupported"", ""reason"": ""Context states partial blockage in Filter-F33 reduced cooling water flow, but does not state it was the root cause.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.7,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [""Partial blockage in Filter-F33 was the root cause""],
+    ""irrelevant_or_extra_parts"": [""Sensor P-210 did not report a high-pressure alarm for Pipeline-7A."", ""The abnormal temperature was associated with partial blockage in Filter-F33."", ""The maintenance team replaced Filter-F33 and cleaned the inlet screen of Pipeline-7A."", ""The measured Pipeline-7A pressure during the inspection was 8.8 MPa, below the 9.5 MPa alarm threshold.""],
+    ""reason"": ""Answer covers all expected points and is relevant to the question.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0011,cross_document,hard,text,bm25,5,Which safety device required by Safety-Regulation-42 was verified after IR-2024-017?,ReliefValve-RV9 was verified after IR-2024-017.,0.5,1.0,0.3333,0.5,0.9,1,1,2,0,0,1,0,3804.04,3803.96,doc_002_safety_rules-chunk-000 | doc_003_incident_report-chunk-002 | doc_003_incident_report-chunk-001 | doc_004_pipeline_inspection-chunk-000 | doc_003_incident_report-chunk-003,"[{""claim"": ""Safety-Regulation-42 requires ReliefValve-RV9"", ""verdict"": ""unsupported"", ""reason"": ""No direct support from context""}, {""claim"": ""ReliefValve-RV9 was verified after IR-2024-017"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim""}]",[],[],Directly answers the question and covers all expected points,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Safety-Regulation-42 requires ReliefValve-RV9"", ""verdict"": ""unsupported"", ""reason"": ""No direct support from context""},
+      {""claim"": ""ReliefValve-RV9 was verified after IR-2024-017"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Directly answers the question and covers all expected points""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0011,cross_document,hard,text,vector,5,Which safety device required by Safety-Regulation-42 was verified after IR-2024-017?,ReliefValve-RV9 was verified after IR-2024-017.,0.5,1.0,0.3333,1.0,0.9,5,0,5,0,1,1,0,5581.51,5581.42,doc_002_safety_rules-chunk-000 | doc_002_safety_rules-chunk-002 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-002,"[{""claim"": ""Safety-Regulation-42 requires ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9""}, {""claim"": ""ReliefValve-RV9 was verified after IR-2024-017"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 was inspected during inspection workflow for IR-2024-017""}, {""claim"": ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100""}, {""claim"": ""ReliefValve-RV9 was verified after IR-2024-017"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 was inspected during inspection workflow for IR-2024-017""}, {""claim"": ""Safety-Regulation-42 requires ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9""}]",[],"[""ReliefValve-RV9 was verified after IR-2024-017""]",Answer covers all expected points and is relevant to the question.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Safety-Regulation-42 requires ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9""},
+      {""claim"": ""ReliefValve-RV9 was verified after IR-2024-017"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 was inspected during inspection workflow for IR-2024-017""},
+      {""claim"": ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100""},
+      {""claim"": ""ReliefValve-RV9 was verified after IR-2024-017"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 was inspected during inspection workflow for IR-2024-017""},
+      {""claim"": ""Safety-Regulation-42 requires ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""ReliefValve-RV9 was verified after IR-2024-017""],
+    ""reason"": ""Answer covers all expected points and is relevant to the question.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0011,cross_document,hard,text,router,5,Which safety device required by Safety-Regulation-42 was verified after IR-2024-017?,"Safety-Regulation-42 required ReliefValve-RV9, which was verified after IR-2024-017.",1.0,1.0,0.6667,1.0,0.9,2,0,2,0,0,1,1,4047.34,4047.25,doc_002_safety_rules-chunk-000 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-002 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-000,"[{""claim"": ""Safety-Regulation-42 requires ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9""}, {""claim"": ""ReliefValve-RV9 was verified after IR-2024-017"", ""verdict"": ""supported"", ""reason"": ""Inspection Result states ReliefValve-RV9 was inspected and verified after IR-2024-017""}]",[],[],Answer directly addresses the required points and is supported by the context.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Safety-Regulation-42 requires ReliefValve-RV9"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 requires BluePump-X100 to install ReliefValve-RV9""},
+      {""claim"": ""ReliefValve-RV9 was verified after IR-2024-017"", ""verdict"": ""supported"", ""reason"": ""Inspection Result states ReliefValve-RV9 was inspected and verified after IR-2024-017""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Answer directly addresses the required points and is supported by the context.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0012,cross_document,hard,text,bm25,5,Was Pipeline-7A pressure above the alarm threshold during IR-2024-017 inspection?,Not enough information in the provided context.,0.0,0.0,0.0,1.0,0.9,3,0,3,0,1,1,0,4228.73,4228.63,doc_003_incident_report-chunk-002 | doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-001 | doc_004_pipeline_inspection-chunk-000 | doc_004_pipeline_inspection-chunk-001,"[{""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 8.8 MPa for Pipeline-7A""}, {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 9.5 MPa for Pipeline-7A""}, {""claim"": ""8.8 MPa is below 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 8.8 MPa is below 9.5 MPa""}]",[],"[""Not enough information in the provided context.""]",Directly answers the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 8.8 MPa for Pipeline-7A""},
+      {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 9.5 MPa for Pipeline-7A""},
+      {""claim"": ""8.8 MPa is below 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 8.8 MPa is below 9.5 MPa""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""Not enough information in the provided context.""],
+    ""reason"": ""Directly answers the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0012,cross_document,hard,text,vector,5,Was Pipeline-7A pressure above the alarm threshold during IR-2024-017 inspection?,Not enough information in the provided context.,0.0,0.0,0.0,1.0,0.6,3,0,3,0,1,1,0,4169.76,4169.67,doc_004_pipeline_inspection-chunk-001 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-002 | doc_003_incident_report-chunk-000 | doc_004_pipeline_inspection-chunk-000,"[{""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Measured Pressure: 8.8 MPa""}, {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Alarm Threshold: 9.5 MPa""}, {""claim"": ""8.8 MPa is below 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Status: Below threshold""}]",[],"[""Not enough information in the provided context.""]",Answer is relevant but incomplete due to the 'Not enough information' statement.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Measured Pressure: 8.8 MPa""},
+      {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Alarm Threshold: 9.5 MPa""},
+      {""claim"": ""8.8 MPa is below 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Status: Below threshold""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.6,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""Not enough information in the provided context.""],
+    ""reason"": ""Answer is relevant but incomplete due to the 'Not enough information' statement.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0012,cross_document,hard,text,router,5,Was Pipeline-7A pressure above the alarm threshold during IR-2024-017 inspection?,Not enough information in the provided context.,0.0,0.0,0.0,1.0,0.9,3,0,3,0,0,1,0,3798.94,3798.84,doc_003_incident_report-chunk-002 | doc_003_incident_report-chunk-000 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-001,"[{""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Found in context""}, {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Found in context""}, {""claim"": ""8.8 MPa is below 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Logical deduction from context""}]",[],[],Directly answers the question and covers all expected points,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Found in context""},
+      {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Found in context""},
+      {""claim"": ""8.8 MPa is below 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Logical deduction from context""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Directly answers the question and covers all expected points""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0013,entity_relation,easy,text,bm25,5,Which components must be inspected after an abnormal temperature report from Sensor T-200?,"BluePump-X100, ReliefValve-RV9, and Filter-F33.",1.0,1.0,0.0,0.6667,0.9,2,1,3,0,0,1,0,4413.83,4413.67,doc_002_safety_rules-chunk-002 | doc_001_equipment-chunk-002 | doc_002_safety_rules-chunk-000 | doc_001_equipment-chunk-001 | doc_003_incident_report-chunk-000,"[{""claim"": ""BluePump-X100 must be inspected"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives an abnormal temperature report from Sensor T-200 and must inspect BluePump-X100.""}, {""claim"": ""ReliefValve-RV9 must be inspected"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100.""}, {""claim"": ""Filter-F33 must be inspected"", ""verdict"": ""unsupported"", ""reason"": ""No direct support for Filter-F33 inspection in the context.""}]",[],[],The generated answer directly addresses the user question and covers all expected answer points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 must be inspected"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives an abnormal temperature report from Sensor T-200 and must inspect BluePump-X100.""},
+      {""claim"": ""ReliefValve-RV9 must be inspected"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100.""},
+      {""claim"": ""Filter-F33 must be inspected"", ""verdict"": ""unsupported"", ""reason"": ""No direct support for Filter-F33 inspection in the context.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The generated answer directly addresses the user question and covers all expected answer points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0013,entity_relation,easy,text,vector,5,Which components must be inspected after an abnormal temperature report from Sensor T-200?,"BluePump-X100, ReliefValve-RV9, and Filter-F33.",1.0,1.0,0.0,1.0,0.9,3,0,3,0,0,1,1,4357.7,4357.62,doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-000 | doc_001_equipment-chunk-002 | doc_003_incident_report-chunk-003 | doc_004_pipeline_inspection-chunk-000,"[{""claim"": ""BluePump-X100 must be inspected"", ""verdict"": ""supported"", ""reason"": ""Context mentions BluePump-X100 is inspected in event IR-2024-017""}, {""claim"": ""ReliefValve-RV9 must be inspected"", ""verdict"": ""supported"", ""reason"": ""Context mentions ReliefValve-RV9 is inspected in event IR-2024-017""}, {""claim"": ""Filter-F33 must be inspected"", ""verdict"": ""supported"", ""reason"": ""Context mentions Filter-F33 is inspected in event IR-2024-017""}]",[],[],Generated answer directly matches the expected answer points and is supported by the context.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 must be inspected"", ""verdict"": ""supported"", ""reason"": ""Context mentions BluePump-X100 is inspected in event IR-2024-017""},
+      {""claim"": ""ReliefValve-RV9 must be inspected"", ""verdict"": ""supported"", ""reason"": ""Context mentions ReliefValve-RV9 is inspected in event IR-2024-017""},
+      {""claim"": ""Filter-F33 must be inspected"", ""verdict"": ""supported"", ""reason"": ""Context mentions Filter-F33 is inspected in event IR-2024-017""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly matches the expected answer points and is supported by the context.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0013,entity_relation,easy,text,router,5,Which components must be inspected after an abnormal temperature report from Sensor T-200?,"BluePump-X100, ReliefValve-RV9, and Filter-F33.",1.0,1.0,0.0,0.6667,0.9,2,1,3,0,0,1,0,4328.66,4328.57,doc_002_safety_rules-chunk-002 | doc_001_equipment-chunk-002 | doc_002_safety_rules-chunk-000 | doc_001_equipment-chunk-001 | doc_003_incident_report-chunk-000,"[{""claim"": ""BluePump-X100 must be inspected"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 starts inspection workflow for BluePump-X100 when Sensor T-200 reports an abnormal event.""}, {""claim"": ""ReliefValve-RV9 must be inspected"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100.""}, {""claim"": ""Filter-F33 must be inspected"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context for Filter-F33 inspection.""}]",[],[],Generated answer directly matches expected answer points and is supported by the context.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 must be inspected"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 starts inspection workflow for BluePump-X100 when Sensor T-200 reports an abnormal event.""},
+      {""claim"": ""ReliefValve-RV9 must be inspected"", ""verdict"": ""supported"", ""reason"": ""ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100.""},
+      {""claim"": ""Filter-F33 must be inspected"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context for Filter-F33 inspection.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly matches expected answer points and is supported by the context.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0014,causal_reasoning,medium,text,bm25,5,What maintenance action resolved the abnormal temperature in IR-2024-017?,The maintenance action that resolved the abnormal temperature in IR-2024-017 was replacing Filter-F33 and cleaning the inlet screen of Pipeline-7A.,0.6667,0.6667,1.0,1.0,0.9,3,0,3,0,0,1,0,4168.89,4168.8,doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-000 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-002,"[{""claim"": ""Filter-F33 was replaced"", ""verdict"": ""supported"", ""reason"": ""Context states Filter-F33 was replaced.""}, {""claim"": ""Pipeline-7A inlet screen was cleaned"", ""verdict"": ""supported"", ""reason"": ""Context states the inlet screen of Pipeline-7A was cleaned.""}, {""claim"": ""Sensor T-200 returned to normal outlet temperature readings"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 returned to normal outlet temperature readings after the replacement.""}]",[],[],"The answer directly addresses the maintenance actions taken and the resolution of the abnormal temperature, covering all expected points.","{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""Filter-F33 was replaced"", ""verdict"": ""supported"", ""reason"": ""Context states Filter-F33 was replaced.""},
+      {""claim"": ""Pipeline-7A inlet screen was cleaned"", ""verdict"": ""supported"", ""reason"": ""Context states the inlet screen of Pipeline-7A was cleaned.""},
+      {""claim"": ""Sensor T-200 returned to normal outlet temperature readings"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 returned to normal outlet temperature readings after the replacement.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The answer directly addresses the maintenance actions taken and the resolution of the abnormal temperature, covering all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0014,causal_reasoning,medium,text,vector,5,What maintenance action resolved the abnormal temperature in IR-2024-017?,The maintenance action that resolved the abnormal temperature in IR-2024-017 was the replacement of Filter-F33 and cleaning of the inlet screen of Pipeline-7A.,0.6667,0.8333,1.0,1.0,0.9,3,0,3,0,0,1,0,4139.87,4139.8,doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-001 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-002,"[{""claim"": ""Filter-F33 was replaced"", ""verdict"": ""supported"", ""reason"": ""Context mentions replacement of Filter-F33""}, {""claim"": ""Pipeline-7A inlet screen was cleaned"", ""verdict"": ""supported"", ""reason"": ""Context mentions cleaning of Pipeline-7A inlet screen""}, {""claim"": ""Sensor T-200 returned to normal outlet temperature readings"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 returned to normal readings after replacement""}]",[],[],Answer directly addresses the maintenance action and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""Filter-F33 was replaced"", ""verdict"": ""supported"", ""reason"": ""Context mentions replacement of Filter-F33""},
+      {""claim"": ""Pipeline-7A inlet screen was cleaned"", ""verdict"": ""supported"", ""reason"": ""Context mentions cleaning of Pipeline-7A inlet screen""},
+      {""claim"": ""Sensor T-200 returned to normal outlet temperature readings"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 returned to normal readings after replacement""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Answer directly addresses the maintenance action and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0014,causal_reasoning,medium,text,router,5,What maintenance action resolved the abnormal temperature in IR-2024-017?,The maintenance action that resolved the abnormal temperature in IR-2024-017 was the replacement of Filter-F33 and cleaning of the inlet screen of Pipeline-7A.,0.6667,0.8333,1.0,1.0,0.9,3,0,3,0,0,1,0,4318.46,4318.37,doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-001 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-002,"[{""claim"": ""Filter-F33 was replaced"", ""verdict"": ""supported"", ""reason"": ""Context mentions replacement of Filter-F33""}, {""claim"": ""Pipeline-7A inlet screen was cleaned"", ""verdict"": ""supported"", ""reason"": ""Context mentions cleaning of Pipeline-7A inlet screen""}, {""claim"": ""Sensor T-200 returned to normal outlet temperature readings"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 returned to normal readings after replacement""}]",[],[],Answer directly addresses the maintenance action and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""Filter-F33 was replaced"", ""verdict"": ""supported"", ""reason"": ""Context mentions replacement of Filter-F33""},
+      {""claim"": ""Pipeline-7A inlet screen was cleaned"", ""verdict"": ""supported"", ""reason"": ""Context mentions cleaning of Pipeline-7A inlet screen""},
+      {""claim"": ""Sensor T-200 returned to normal outlet temperature readings"", ""verdict"": ""supported"", ""reason"": ""Context states Sensor T-200 returned to normal readings after replacement""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Answer directly addresses the maintenance action and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0015,global_summary,hard,text,bm25,5,Summarize the safety chain involving BluePump-X100 across the manuals and incident report.,"The safety chain involving BluePump-X100 includes the installation of ReliefValve-RV9 as a required pressure protection device. According to Safety Regulation Manual Safety-Regulation-42, ReliefValve-RV9 must keep its set pressure below 1.1 times the pipeline design pressure. If ControlSystem-CS1 receives an abnormal temperature report from Sensor T-200, the maintenance team must inspect BluePump-X100, ReliefValve-RV9, and Filter-F33. The incident report IR-2024-017",0.6667,0.9286,0.6667,0.0,0.0,0,0,0,0,0,0,0,6483.99,6483.91,doc_002_safety_rules-chunk-000 | doc_002_safety_rules-chunk-002 | doc_004_pipeline_inspection-chunk-000 | doc_003_incident_report-chunk-002 | doc_001_equipment-chunk-000,[],[],[],Judge parse failed: Incomplete JSON object,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 is protected by ReliefValve-RV9 under Safety-Regulation-42"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 requires ReliefValve-RV9 for BluePump-X100""},
+      {""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 receives reports from Sensor T-200 if there is an abnormal temperature event""},
+      {""claim"": ""Sensor P-210 monitors Pipeline-7A pressure"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context""},
+      {""claim"": ""ControlSystem-CS1 receives reports and starts inspection"", ""verdict"": ""supported"", ""reason"": ""Inspection Rule states ControlSystem-CS1 receives reports and inspects components""},
+      {""claim"": ""IR-2024-017 root cause was Filter-F33 blockage"", ""verdict"": ""supported"", ""reason"": ""IR-2024-017 inspection result states Filter-F33 was inspected and found to be in good condition""},
+      {""claim"": ""Maintenance replaced Filter-F33"", ""verdict"": ""unsupported"", ""reason"": ""No mention of Filter-F33 replacement in the context""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.6,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [""Sensor P-210 monitors Pipeline-7A pressure"", ""Maintenance replaced Filter-F33""],
+    ""irrelevant_or_extra_parts"": [""The safety chain involving BluePump-X100 includes the installation of ReliefValve-RV9 as a required pressure protection device. According to Safety Regulation Manual Safety-Regulation-42, ReliefValve-RV9 must keep its set pressure below 1.1 times the pipeline design pressure. ReliefValve-RV9 must be inspected after any abnormal temperature event involving Blue",Incomplete JSON object
+llm_judge_eval_v0_001,EVAL-0015,global_summary,hard,text,vector,5,Summarize the safety chain involving BluePump-X100 across the manuals and incident report.,"The safety chain involving BluePump-X100 across the manuals and incident report involves the following steps:
+
+1. **Safety Regulation Manual**:
+   - BluePump-X100 requires the installation of ReliefValve-RV9 as a required pressure protection device.
+   - ReliefValve-RV9 must keep its set pressure below 1.1 times the pipeline design pressure (Pipeline-7A).
+   - ReliefValve-RV9 must be inspected after any abnormal temperature event involving BluePump-X100.
+
+2. **Incident Report IR-20",0.0,0.8214,0.8889,1.0,0.6,5,0,5,3,5,1,0,5970.27,5970.17,doc_002_safety_rules-chunk-000 | doc_001_equipment-chunk-000 | doc_003_incident_report-chunk-000 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-002,"[{""claim"": ""BluePump-X100 is protected by ReliefValve-RV9 under Safety-Regulation-42"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 requires ReliefValve-RV9 for BluePump-X100""}, {""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Sensor T-200 reports abnormal outlet temperature for BluePump-X100""}, {""claim"": ""Sensor P-210 monitors Pipeline-7A pressure"", ""verdict"": ""supported"", ""reason"": ""Sensor P-210 did not report a high-pressure alarm for Pipeline-7A""}, {""claim"": ""ControlSystem-CS1 receives reports and starts inspection"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 triggered an inspection workflow for incident IR-2024-017""}, {""claim"": ""IR-2024-017 root cause was Filter-F33 blockage"", ""verdict"": ""supported"", ""reason"": ""IR-2024-017 event summary mentions Filter-F33 blockage as the root cause""}]","[""Sensor P-210 monitors Pipeline-7A pressure"", ""ControlSystem-CS1 receives reports and starts inspection"", ""IR-2024-017 root cause was Filter-F33 blockage""]","[""The safety chain involving BluePump-X100 across the manuals and incident report involves the following steps:"", ""Safety Regulation Manual"", ""Pump Unit"", ""Inspection Rule"", ""Inspection Result""]",Missing relevant points and contains irrelevant details.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 is protected by ReliefValve-RV9 under Safety-Regulation-42"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 requires ReliefValve-RV9 for BluePump-X100""},
+      {""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Sensor T-200 reports abnormal outlet temperature for BluePump-X100""},
+      {""claim"": ""Sensor P-210 monitors Pipeline-7A pressure"", ""verdict"": ""supported"", ""reason"": ""Sensor P-210 did not report a high-pressure alarm for Pipeline-7A""},
+      {""claim"": ""ControlSystem-CS1 receives reports and starts inspection"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 triggered an inspection workflow for incident IR-2024-017""},
+      {""claim"": ""IR-2024-017 root cause was Filter-F33 blockage"", ""verdict"": ""supported"", ""reason"": ""IR-2024-017 event summary mentions Filter-F33 blockage as the root cause""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.6,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [""Sensor P-210 monitors Pipeline-7A pressure"", ""ControlSystem-CS1 receives reports and starts inspection"", ""IR-2024-017 root cause was Filter-F33 blockage""],
+    ""irrelevant_or_extra_parts"": [""The safety chain involving BluePump-X100 across the manuals and incident report involves the following steps:"", ""Safety Regulation Manual"", ""Pump Unit"", ""Inspection Rule"", ""Inspection Result""],
+    ""reason"": ""Missing relevant points and contains irrelevant details.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0015,global_summary,hard,text,router,5,Summarize the safety chain involving BluePump-X100 across the manuals and incident report.,"The safety chain involving BluePump-X100 includes the installation of ReliefValve-RV9, which must keep its set pressure below 1.1 times the pipeline design pressure (9.5 MPa). The incident report indicates that Sensor T-200 reported an abnormal outlet temperature for BluePump-X100 on 2024-07-12, triggering an inspection workflow for incident IR-2024-017. The inspection involved BluePump-X100, ReliefValve-RV9, and Filter-F",0.1667,0.7931,0.6667,0.8,0.7,4,1,5,1,1,1,0,5870.02,5869.89,doc_002_safety_rules-chunk-000 | doc_001_equipment-chunk-000 | doc_002_safety_rules-chunk-002 | doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-002,"[{""claim"": ""BluePump-X100 is protected by ReliefValve-RV9 under Safety-Regulation-42"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 mentions ReliefValve-RV9 as a required pressure protection device for BluePump-X100""}, {""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Sensor T-200 is mentioned as reporting an abnormal outlet temperature for BluePump-X100""}, {""claim"": ""Sensor P-210 monitors Pipeline-7A pressure"", ""verdict"": ""unsupported"", ""reason"": ""No mention of Sensor P-210 monitoring Pipeline-7A pressure""}, {""claim"": ""ControlSystem-CS1 receives reports and starts inspection"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 is mentioned as triggering an inspection workflow for incident IR-2024-017""}, {""claim"": ""IR-2024-017 root cause was Filter-F33 blockage"", ""verdict"": ""supported"", ""reason"": ""IR-2024-017 inspection result mentions Filter-F33 blockage as the root cause""}]","[""Sensor P-210 monitors Pipeline-7A pressure""]","[""The maintenance team inspected BluePump-X100, ReliefValve-RV9, and Filter-F33. ReliefValve-RV9 passed visual inspection and its set pressure record was verified.""]",The answer covers all expected points and is relevant to the question.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 is protected by ReliefValve-RV9 under Safety-Regulation-42"", ""verdict"": ""supported"", ""reason"": ""Safety-Regulation-42 mentions ReliefValve-RV9 as a required pressure protection device for BluePump-X100""},
+      {""claim"": ""Sensor T-200 monitors outlet temperature"", ""verdict"": ""supported"", ""reason"": ""Sensor T-200 is mentioned as reporting an abnormal outlet temperature for BluePump-X100""},
+      {""claim"": ""Sensor P-210 monitors Pipeline-7A pressure"", ""verdict"": ""unsupported"", ""reason"": ""No mention of Sensor P-210 monitoring Pipeline-7A pressure""},
+      {""claim"": ""ControlSystem-CS1 receives reports and starts inspection"", ""verdict"": ""supported"", ""reason"": ""ControlSystem-CS1 is mentioned as triggering an inspection workflow for incident IR-2024-017""},
+      {""claim"": ""IR-2024-017 root cause was Filter-F33 blockage"", ""verdict"": ""supported"", ""reason"": ""IR-2024-017 inspection result mentions Filter-F33 blockage as the root cause""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.7,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [""Sensor P-210 monitors Pipeline-7A pressure""],
+    ""irrelevant_or_extra_parts"": [""The maintenance team inspected BluePump-X100, ReliefValve-RV9, and Filter-F33. ReliefValve-RV9 passed visual inspection and its set pressure record was verified.""],
+    ""reason"": ""The answer covers all expected points and is relevant to the question.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0016,table,easy,table,bm25,5,What is the measured pressure of Pipeline-7A in the inspection table?,8.8 MPa,0.0,1.0,0.0,1.0,0.9,5,0,5,0,0,1,0,5006.17,5006.09,doc_004_pipeline_inspection-chunk-001 | doc_001_equipment-chunk-000 | doc_003_incident_report-chunk-002 | doc_002_safety_rules-chunk-001 | doc_002_safety_rules-chunk-002,"[{""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the measured pressure for Pipeline-7A is 8.8 MPa""}, {""claim"": ""8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""The generated answer is exactly 8.8 MPa, which is supported by the context""}, {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the measured pressure for Pipeline-7A is 8.8 MPa""}, {""claim"": ""8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""The generated answer is exactly 8.8 MPa, which is supported by the context""}, {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the measured pressure for Pipeline-7A is 8.8 MPa""}]",[],[],Generated answer directly and accurately covers all expected answer points without any missing or irrelevant information,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the measured pressure for Pipeline-7A is 8.8 MPa""},
+      {""claim"": ""8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""The generated answer is exactly 8.8 MPa, which is supported by the context""},
+      {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the measured pressure for Pipeline-7A is 8.8 MPa""},
+      {""claim"": ""8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""The generated answer is exactly 8.8 MPa, which is supported by the context""},
+      {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states the measured pressure for Pipeline-7A is 8.8 MPa""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly and accurately covers all expected answer points without any missing or irrelevant information""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0016,table,easy,table,vector,5,What is the measured pressure of Pipeline-7A in the inspection table?,The measured pressure of Pipeline-7A in the inspection table is 8.8 MPa.,1.0,1.0,1.0,1.0,0.9,2,0,2,0,0,1,1,3991.08,3990.99,doc_004_pipeline_inspection-chunk-001 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-002 | doc_004_pipeline_inspection-chunk-002 | doc_004_pipeline_inspection-chunk-000,"[{""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states Pipeline-7A measured pressure is 8.8 MPa""}, {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states Pipeline-7A measured pressure is 8.8 MPa""}]",[],[],Generated answer directly and accurately covers all expected answer points without missing any information or including irrelevant details.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states Pipeline-7A measured pressure is 8.8 MPa""},
+      {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states Pipeline-7A measured pressure is 8.8 MPa""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly and accurately covers all expected answer points without missing any information or including irrelevant details.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0016,table,easy,table,router,5,What is the measured pressure of Pipeline-7A in the inspection table?,8.8 MPa,0.0,1.0,0.0,0.8,0.9,4,1,5,0,0,1,0,4626.79,4626.68,doc_004_pipeline_inspection-chunk-001,"[{""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""}, {""claim"": ""8.8 MPa is the measured pressure of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""}, {""claim"": ""8.8 MPa is the alarm threshold for Pipeline-7A"", ""verdict"": ""unsupported"", ""reason"": ""Context does not mention the alarm threshold for Pipeline-7A.""}, {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""}, {""claim"": ""8.8 MPa is the measured pressure of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""}]",[],[],Generated answer directly matches the context and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""},
+      {""claim"": ""8.8 MPa is the measured pressure of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""},
+      {""claim"": ""8.8 MPa is the alarm threshold for Pipeline-7A"", ""verdict"": ""unsupported"", ""reason"": ""Context does not mention the alarm threshold for Pipeline-7A.""},
+      {""claim"": ""Pipeline-7A measured pressure is 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""},
+      {""claim"": ""8.8 MPa is the measured pressure of Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Generated answer directly matches the context and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0017,table,medium,table,bm25,5,Was Pipeline-7A below the alarm threshold according to the table?,"Yes, Pipeline-7A was below the alarm threshold according to the table and the incident report.",0.3333,1.0,1.0,1.0,0.9,3,0,3,0,2,1,0,4495.41,4495.33,doc_004_pipeline_inspection-chunk-001 | doc_003_incident_report-chunk-002 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-003,"[{""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Measured Pressure: 8.8 MPa""}, {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Alarm Threshold: 9.5 MPa""}, {""claim"": ""Pipeline-7A was below threshold"", ""verdict"": ""supported"", ""reason"": ""Table records: Status: Below threshold""}]",[],"[""According to the table and the incident report."", ""The maintenance team inspected BluePump-X100, ReliefValve-RV9, and Filter-F33.""]",Directly answers the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Measured Pressure: 8.8 MPa""},
+      {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Alarm Threshold: 9.5 MPa""},
+      {""claim"": ""Pipeline-7A was below threshold"", ""verdict"": ""supported"", ""reason"": ""Table records: Status: Below threshold""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""According to the table and the incident report."", ""The maintenance team inspected BluePump-X100, ReliefValve-RV9, and Filter-F33.""],
+    ""reason"": ""Directly answers the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0017,table,medium,table,vector,5,Was Pipeline-7A below the alarm threshold according to the table?,"Yes, Pipeline-7A was below the alarm threshold according to the table provided in the context.",0.3333,0.0,1.0,1.0,0.9,3,0,3,0,0,1,0,4041.47,4041.39,doc_004_pipeline_inspection-chunk-001 | doc_002_safety_rules-chunk-001 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-000 | doc_003_incident_report-chunk-002,"[{""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 8.8 MPa for Pipeline-7A""}, {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 9.5 MPa for Pipeline-7A""}, {""claim"": ""Pipeline-7A was below threshold"", ""verdict"": ""supported"", ""reason"": ""Table shows 'Below threshold' for Pipeline-7A""}]",[],[],Answer directly addresses the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 8.8 MPa for Pipeline-7A""},
+      {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table shows 9.5 MPa for Pipeline-7A""},
+      {""claim"": ""Pipeline-7A was below threshold"", ""verdict"": ""supported"", ""reason"": ""Table shows 'Below threshold' for Pipeline-7A""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Answer directly addresses the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0017,table,medium,table,router,5,Was Pipeline-7A below the alarm threshold according to the table?,"Yes, Pipeline-7A was below the alarm threshold according to the table.",0.3333,0.0,1.0,1.0,0.9,3,0,3,0,0,1,0,3766.42,3766.35,doc_004_pipeline_inspection-chunk-001,"[{""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""}, {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""}, {""claim"": ""Pipeline-7A was below threshold"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""}]",[],[],Answer directly addresses the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""},
+      {""claim"": ""Alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""},
+      {""claim"": ""Pipeline-7A was below threshold"", ""verdict"": ""supported"", ""reason"": ""Context directly states this fact.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Answer directly addresses the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0018,image,medium,image | caption | ocr,bm25,5,Where is ReliefValve-RV9 installed according to the diagram?,"ReliefValve-RV9 is installed on the discharge side of BluePump-X100 and connected near Pipeline-7A, as shown in the ReliefValve-RV9 installation diagram.",1.0,0.875,1.0,1.0,0.9,2,0,2,0,1,1,1,4509.53,4509.4,doc_004_pipeline_inspection-chunk-002 | doc_001_equipment-chunk-000 | doc_002_safety_rules-chunk-000 | doc_001_equipment-chunk-003 | doc_003_incident_report-chunk-002,"[{""claim"": ""ReliefValve-RV9 is installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context mentions ReliefValve-RV9 is installed on the discharge side of BluePump-X100.""}, {""claim"": ""ReliefValve-RV9 is connected near Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states ReliefValve-RV9 is connected near Pipeline-7A in the installation diagram.""}]",[],"[""ReliefValve-RV9 is installed on the discharge side of BluePump-X100 and connected near Pipeline-7A, as shown in the ReliefValve-RV9 installation diagram.""]",The answer directly addresses the user question and covers all expected points without missing any.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""ReliefValve-RV9 is installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context mentions ReliefValve-RV9 is installed on the discharge side of BluePump-X100.""},
+      {""claim"": ""ReliefValve-RV9 is connected near Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states ReliefValve-RV9 is connected near Pipeline-7A in the installation diagram.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""ReliefValve-RV9 is installed on the discharge side of BluePump-X100 and connected near Pipeline-7A, as shown in the ReliefValve-RV9 installation diagram.""],
+    ""reason"": ""The answer directly addresses the user question and covers all expected points without missing any.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0018,image,medium,image | caption | ocr,vector,5,Where is ReliefValve-RV9 installed according to the diagram?,ReliefValve-RV9 is installed on the discharge side of BluePump-X100 and connected near Pipeline-7A.,1.0,1.0,0.6667,1.0,0.9,2,0,2,0,0,1,1,4226.29,4226.22,doc_004_pipeline_inspection-chunk-002 | doc_002_safety_rules-chunk-000 | doc_003_incident_report-chunk-002 | doc_001_equipment-chunk-000 | doc_001_equipment-chunk-003,"[{""claim"": ""ReliefValve-RV9 is installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context mentions ReliefValve-RV9 is installed on the discharge side of BluePump-X100.""}, {""claim"": ""ReliefValve-RV9 is connected near Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states ReliefValve-RV9 is installed on the discharge side of BluePump-X100 and connected near Pipeline-7A.""}]",[],[],The answer directly addresses the user question and covers all expected answer points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""ReliefValve-RV9 is installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context mentions ReliefValve-RV9 is installed on the discharge side of BluePump-X100.""},
+      {""claim"": ""ReliefValve-RV9 is connected near Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Context states ReliefValve-RV9 is installed on the discharge side of BluePump-X100 and connected near Pipeline-7A.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""The answer directly addresses the user question and covers all expected answer points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0018,image,medium,image | caption | ocr,router,5,Where is ReliefValve-RV9 installed according to the diagram?,ReliefValve-RV9 is installed on the discharge side of BluePump-X100 and connected near Pipeline-7A.,1.0,1.0,0.6667,1.0,0.9,2,0,2,0,0,1,1,3791.68,3791.58,doc_004_pipeline_inspection-chunk-002,"[{""claim"": ""ReliefValve-RV9 is installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Directly stated in the context.""}, {""claim"": ""ReliefValve-RV9 is connected near Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Directly stated in the context.""}]",[],[],Directly answers the question and covers all expected points.,"{
+  ""faithfulness"": {
+    ""score"": 0.6666666666666666,
+    ""claims"": [
+      {""claim"": ""ReliefValve-RV9 is installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Directly stated in the context.""},
+      {""claim"": ""ReliefValve-RV9 is connected near Pipeline-7A"", ""verdict"": ""supported"", ""reason"": ""Directly stated in the context.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [],
+    ""reason"": ""Directly answers the question and covers all expected points.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0019,fact,easy,text,bm25,5,Which equipment was reviewed after incident IR-2024-017?,"BluePump-X100, Pipeline-7A, and Filter-F33 were reviewed after incident IR-2024-017.",0.4,1.0,0.75,0.8,0.7,4,1,5,0,1,1,0,4396.68,4396.59,doc_004_pipeline_inspection-chunk-000 | doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-002 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-000,"[{""claim"": ""BluePump-X100 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}, {""claim"": ""Pipeline-7A was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}, {""claim"": ""ReliefValve-RV9 was reviewed"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context.""}, {""claim"": ""Sensor T-200 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}, {""claim"": ""Sensor P-210 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}]",[],"[""Filter-F33 was reviewed""]",Answer covers all expected points and is relevant to the question.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""},
+      {""claim"": ""Pipeline-7A was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""},
+      {""claim"": ""ReliefValve-RV9 was reviewed"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context.""},
+      {""claim"": ""Sensor T-200 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""},
+      {""claim"": ""Sensor P-210 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.7,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""Filter-F33 was reviewed""],
+    ""reason"": ""Answer covers all expected points and is relevant to the question.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0019,fact,easy,text,vector,5,Which equipment was reviewed after incident IR-2024-017?,BluePump-X100,0.2,1.0,0.0,0.8,0.5,4,1,5,1,1,1,0,4909.16,4909.08,doc_003_incident_report-chunk-000 | doc_004_pipeline_inspection-chunk-000 | doc_003_incident_report-chunk-002 | doc_003_incident_report-chunk-003 | doc_002_safety_rules-chunk-002,"[{""claim"": ""BluePump-X100 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context mentions BluePump-X100 was reviewed in the inspection overview.""}, {""claim"": ""Pipeline-7A was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context mentions Pipeline-7A was reviewed in the inspection overview.""}, {""claim"": ""ReliefValve-RV9 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context mentions ReliefValve-RV9 was reviewed in the inspection overview.""}, {""claim"": ""Sensor T-200 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context mentions Sensor T-200 was reviewed in the inspection overview.""}, {""claim"": ""Sensor P-210 was reviewed"", ""verdict"": ""unsupported"", ""reason"": ""No mention of Sensor P-210 in the generated answer or context.""}]","[""Sensor P-210 was reviewed""]","[""BluePump-X100""]",The answer is mostly relevant but misses Sensor P-210 and includes irrelevant details.,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context mentions BluePump-X100 was reviewed in the inspection overview.""},
+      {""claim"": ""Pipeline-7A was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context mentions Pipeline-7A was reviewed in the inspection overview.""},
+      {""claim"": ""ReliefValve-RV9 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context mentions ReliefValve-RV9 was reviewed in the inspection overview.""},
+      {""claim"": ""Sensor T-200 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context mentions Sensor T-200 was reviewed in the inspection overview.""},
+      {""claim"": ""Sensor P-210 was reviewed"", ""verdict"": ""unsupported"", ""reason"": ""No mention of Sensor P-210 in the generated answer or context.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.5,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [""Sensor P-210 was reviewed""],
+    ""irrelevant_or_extra_parts"": [""BluePump-X100""],
+    ""reason"": ""The answer is mostly relevant but misses Sensor P-210 and includes irrelevant details.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0019,fact,easy,text,router,5,Which equipment was reviewed after incident IR-2024-017?,"BluePump-X100, Pipeline-7A, and Filter-F33 were reviewed after incident IR-2024-017.",0.4,1.0,0.75,0.8,0.7,4,1,5,0,1,1,0,4267.2,4267.07,doc_004_pipeline_inspection-chunk-000 | doc_003_incident_report-chunk-001 | doc_003_incident_report-chunk-002 | doc_003_incident_report-chunk-003 | doc_003_incident_report-chunk-000,"[{""claim"": ""BluePump-X100 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}, {""claim"": ""Pipeline-7A was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}, {""claim"": ""ReliefValve-RV9 was reviewed"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context.""}, {""claim"": ""Sensor T-200 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}, {""claim"": ""Sensor P-210 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}]",[],"[""Filter-F33 was reviewed""]",Answer covers all expected points and is relevant to the question.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""BluePump-X100 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""},
+      {""claim"": ""Pipeline-7A was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""},
+      {""claim"": ""ReliefValve-RV9 was reviewed"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context.""},
+      {""claim"": ""Sensor T-200 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""},
+      {""claim"": ""Sensor P-210 was reviewed"", ""verdict"": ""supported"", ""reason"": ""Context supports this claim.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.7,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""Filter-F33 was reviewed""],
+    ""reason"": ""Answer covers all expected points and is relevant to the question.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0020,multi_hop,hard,table | image | caption | ocr,bm25,5,"According to the table and diagram, what was Pipeline-7A's pressure status and where was ReliefValve-RV9 installed?",Pipeline-7A's pressure status was below the 9.5 MPa alarm threshold. ReliefValve-RV9 was installed on the discharge side of BluePump-X100.,1.0,1.0,0.7143,0.8,0.9,4,1,5,0,1,1,1,4728.93,4728.84,doc_004_pipeline_inspection-chunk-002 | doc_003_incident_report-chunk-002 | doc_004_pipeline_inspection-chunk-001 | doc_001_equipment-chunk-000 | doc_002_safety_rules-chunk-000,"[{""claim"": ""Pipeline-7A measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table and context""}, {""claim"": ""Pipeline-7A alarm threshold was 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context""}, {""claim"": ""Pipeline-7A status was below threshold"", ""verdict"": ""supported"", ""reason"": ""Table and context""}, {""claim"": ""ReliefValve-RV9 was installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Diagram and context""}, {""claim"": ""Pipeline-7A's pressure status was below the 9.5 MPa alarm threshold"", ""verdict"": ""supported"", ""reason"": ""Context""}]",[],"[""Pipeline-7A's pressure status was below the 9.5 MPa alarm threshold""]",Directly answers the question and covers all expected points,"{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table and context""},
+      {""claim"": ""Pipeline-7A alarm threshold was 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""No direct support in context""},
+      {""claim"": ""Pipeline-7A status was below threshold"", ""verdict"": ""supported"", ""reason"": ""Table and context""},
+      {""claim"": ""ReliefValve-RV9 was installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Diagram and context""},
+      {""claim"": ""Pipeline-7A's pressure status was below the 9.5 MPa alarm threshold"", ""verdict"": ""supported"", ""reason"": ""Context""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""Pipeline-7A's pressure status was below the 9.5 MPa alarm threshold""],
+    ""reason"": ""Directly answers the question and covers all expected points""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0020,multi_hop,hard,table | image | caption | ocr,vector,5,"According to the table and diagram, what was Pipeline-7A's pressure status and where was ReliefValve-RV9 installed?",Pipeline-7A's pressure status was below threshold. ReliefValve-RV9 was installed on the discharge side of BluePump-X100 and near Pipeline-7A.,0.5,1.0,0.7143,1.0,0.8,4,0,4,0,1,1,0,4702.97,4702.89,doc_004_pipeline_inspection-chunk-002 | doc_004_pipeline_inspection-chunk-001 | doc_002_safety_rules-chunk-001 | doc_002_safety_rules-chunk-000 | doc_003_incident_report-chunk-002,"[{""claim"": ""Pipeline-7A measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Pipeline-7A, 8.8 MPa""}, {""claim"": ""Pipeline-7A alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Pipeline-7A, 9.5 MPa""}, {""claim"": ""Pipeline-7A status was below threshold"", ""verdict"": ""supported"", ""reason"": ""Table records: Pipeline-7A, Below threshold""}, {""claim"": ""ReliefValve-RV9 was installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Diagram: ReliefValve-RV9 installed on the discharge side of BluePump-X100""}]",[],"[""ReliefValve-RV9 was installed near Pipeline-7A""]",Answer covers all expected points and is relevant to the question.,"{
+  ""faithfulness"": {
+    ""score"": 0.6,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Pipeline-7A, 8.8 MPa""},
+      {""claim"": ""Pipeline-7A alarm threshold was 9.5 MPa"", ""verdict"": ""supported"", ""reason"": ""Table records: Pipeline-7A, 9.5 MPa""},
+      {""claim"": ""Pipeline-7A status was below threshold"", ""verdict"": ""supported"", ""reason"": ""Table records: Pipeline-7A, Below threshold""},
+      {""claim"": ""ReliefValve-RV9 was installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Diagram: ReliefValve-RV9 installed on the discharge side of BluePump-X100""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.8,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""ReliefValve-RV9 was installed near Pipeline-7A""],
+    ""reason"": ""Answer covers all expected points and is relevant to the question.""
+  }
+}",
+llm_judge_eval_v0_001,EVAL-0020,multi_hop,hard,table | image | caption | ocr,router,5,"According to the table and diagram, what was Pipeline-7A's pressure status and where was ReliefValve-RV9 installed?","Pipeline-7A's pressure status was 8.8 MPa, which was below the 9.5 MPa alarm threshold.
+
+ReliefValve-RV9 was installed on the discharge side of BluePump-X100.",1.0,1.0,0.7143,0.75,0.9,3,1,4,0,1,1,0,5255.34,5255.25,doc_003_incident_report-chunk-002 | doc_002_safety_rules-chunk-000 | doc_001_equipment-chunk-000 | doc_003_incident_report-chunk-003 | doc_001_equipment-chunk-003,"[{""claim"": ""Pipeline-7A measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context: The measured Pipeline-7A pressure during the inspection was 8.8 MPa.""}, {""claim"": ""Pipeline-7A alarm threshold was 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""No direct mention of the alarm threshold in the context.""}, {""claim"": ""Pipeline-7A status was below threshold"", ""verdict"": ""supported"", ""reason"": ""Context: Pipeline-7A's measured pressure was 8.8 MPa, below the 9.5 MPa alarm threshold.""}, {""claim"": ""ReliefValve-RV9 was installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context: BluePump-X100 connects to Pipeline-7A and ReliefValve-RV9. ReliefValve-RV9 is installed on the discharge side of BluePump-X100.""}]",[],"[""Pipeline-7A's pressure status was 8.8 MPa, which was below the 9.5 MPa alarm threshold.""]","The answer directly addresses the question and covers all expected points, except for the alarm threshold which is not explicitly stated in the context.","{
+  ""faithfulness"": {
+    ""score"": 0.4,
+    ""claims"": [
+      {""claim"": ""Pipeline-7A measured pressure was 8.8 MPa"", ""verdict"": ""supported"", ""reason"": ""Context: The measured Pipeline-7A pressure during the inspection was 8.8 MPa.""},
+      {""claim"": ""Pipeline-7A alarm threshold was 9.5 MPa"", ""verdict"": ""unsupported"", ""reason"": ""No direct mention of the alarm threshold in the context.""},
+      {""claim"": ""Pipeline-7A status was below threshold"", ""verdict"": ""supported"", ""reason"": ""Context: Pipeline-7A's measured pressure was 8.8 MPa, below the 9.5 MPa alarm threshold.""},
+      {""claim"": ""ReliefValve-RV9 was installed on the discharge side of BluePump-X100"", ""verdict"": ""supported"", ""reason"": ""Context: BluePump-X100 connects to Pipeline-7A and ReliefValve-RV9. ReliefValve-RV9 is installed on the discharge side of BluePump-X100.""}
+    ]
+  },
+  ""answer_relevance"": {
+    ""score"": 0.9,
+    ""directly_answers"": true,
+    ""missing_answer_points"": [],
+    ""irrelevant_or_extra_parts"": [""Pipeline-7A's pressure status was 8.8 MPa, which was below the 9.5 MPa alarm threshold.""],
+    ""reason"": ""The answer directly addresses the question and covers all expected points, except for the alarm threshold which is not explicitly stated in the context.""
+  }
+}",

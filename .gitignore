@@ -57,6 +57,7 @@ inputs/
 output/
 rag_storage/
 data/
+ollama_demo_storage/
 
 # User cumstomized prompt directory
 prompts/entity_type/

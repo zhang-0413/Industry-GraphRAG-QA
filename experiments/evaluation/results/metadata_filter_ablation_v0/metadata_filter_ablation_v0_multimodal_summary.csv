@@ -1,0 +1,8 @@
+﻿strategy,samples,avg_hit_at_5,avg_recall_at_5,avg_mrr,avg_context_precision,avg_content_type_precision,avg_candidate_space_reduction,avg_latency_ms
+bm25_metadata_filtered,4,1.0,1.0,1.0,1.0,1.0,0.9107,0.11
+vector_metadata_post_filter,4,1.0,1.0,1.0,1.0,1.0,0.9107,715.38
+bm25_vector_rrf_metadata_filtered,4,1.0,1.0,1.0,1.0,1.0,0.9107,715.5
+router_metadata_filter,4,1.0,1.0,1.0,1.0,1.0,0.9107,715.5
+bm25_unfiltered,4,1.0,1.0,1.0,0.25,0.25,0.0,0.81
+vector_unfiltered,4,1.0,1.0,1.0,0.25,0.25,0.0,715.14
+bm25_vector_rrf_unfiltered,4,1.0,1.0,1.0,0.25,0.25,0.0,716.0

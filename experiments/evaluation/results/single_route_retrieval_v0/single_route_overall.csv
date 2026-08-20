@@ -1,0 +1,4 @@
+﻿route,samples,hit_at_5,recall_at_5,mrr,context_precision,context_recall,latency_ms,all_evidence_hit_samples
+vector,20,1.0,0.9625,0.9,0.25,0.9625,808.28,19
+bm25,20,1.0,0.9375,1.0,0.24,0.9375,0.82,18
+graph,20,0.75,0.7125,0.7,0.19,0.7125,1143.07,14

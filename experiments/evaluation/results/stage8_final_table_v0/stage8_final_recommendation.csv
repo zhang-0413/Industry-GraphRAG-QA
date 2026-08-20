@@ -1,0 +1,8 @@
+﻿component,final_choice,reason
+chunking,structure-aware chunking,"Preserves section metadata, removes tiny broken chunks, supports stable chunk_id/hash for incremental index."
+default retrieval,BM25 + Vector + RRF,"Best stable retrieval backbone in current experiments: Recall@5 0.9625, MRR 1.0."
+query router,router_safe,Recall@5 0.9875 with only one routed rerank call; avoids overusing Graph/rerank.
+graph retrieval,"selective, not default",Graph alone and naive graph fusion underperformed; use for entity/global cases after routing.
+rerank,conditional,"Useful for noisy Graph/global-summary cases, harmful when applied blindly."
+metadata filter,enable for table/image/multi-hop,Multimodal Context Precision improved from 0.25 to 1.0 while Recall@5 stayed 1.0.
+incremental index,chunk-level diff with graph cleanup,Embedding recompute count dropped from 34 to 2 with no stale chunks.

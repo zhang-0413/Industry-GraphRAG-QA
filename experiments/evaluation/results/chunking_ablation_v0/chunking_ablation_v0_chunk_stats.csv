@@ -1,0 +1,3 @@
+﻿chunking_strategy,chunk_count,avg_chars,min_chars,max_chars,tiny_chunk_count_lt_80_chars,heading_coverage
+fixed,9,354.89,4,535,2,0.0
+structure_aware,11,278.09,182,411,0,1.0
